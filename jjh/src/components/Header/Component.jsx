@@ -22,8 +22,8 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  margin: 0 10%;
+  width: 70%;
+  margin: 0 15%;
   padding: 15px 0;
   font-size: 1.5rem;
   & > div:first-child {

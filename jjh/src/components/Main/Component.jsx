@@ -1,11 +1,13 @@
-import IntroComponent from "../Header/Intro/Component";
-import DetailComponent from "../Header/Detail/Component";
+import IntroComponent from "./Intro/Component";
+import DetailComponent from "./Detail/Component";
+import SkillsComponent from "./Skills/Component";
 
 const MainComponent = () => {
   return (
     <div>
       <IntroComponent />
       <DetailComponent />
+      <SkillsComponent />
     </div>
   );
 };
