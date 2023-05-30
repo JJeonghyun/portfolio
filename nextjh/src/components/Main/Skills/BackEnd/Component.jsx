@@ -1,29 +1,21 @@
-import styled from "styled-components";
-
 const BackEnd = () => {
   return (
-    <Container>
+    <div>
       <div>BackEnd</div>
       <div>
-        <img src="/imgs/node js icon.png" alt="" />
+        <img src="/imgs/stack/back/node js icon.png" alt="" />
+        <img src="/imgs/stack/back/nodemon.png" alt="" />
+        <img src="/imgs/stack/back/pm2.png" alt="" />
       </div>
-    </Container>
+      <div>
+        <img src="/imgs/stack/back/axios.svg" alt="" />
+        <img src="/imgs/stack/back/ts.jpg" alt="" />
+      </div>
+      <div>
+        <img src="/imgs/stack/db/mysql icon.jpeg" alt="" />
+        <img src="/imgs/stack/db/Database icon.jpg" alt="" />
+      </div>
+    </div>
   );
 };
 export default BackEnd;
-
-const Container = styled.div`
-  width: 30%;
-  & > div:first-child {
-    width: 90%;
-    padding: 5px 0;
-    border-bottom: 1px solid black;
-    color: orange;
-    font-size: 1.2rem;
-    font-weight: 800;
-  }
-  img {
-    width: 30%;
-    padding: 20px 0;
-  }
-`;
