@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import Solar from "./Solar";
 import NFTMarket from "./NFTMarket";
+import Tesla from "./Tesla";
+import U2vibe from "./U2vibe";
 
 const Project = () => {
   return (
@@ -11,6 +13,8 @@ const Project = () => {
         <div>
           <Solar />
           <NFTMarket />
+          <Tesla />
+          <U2vibe />
         </div>
       </div>
     </ProjectContainer>
