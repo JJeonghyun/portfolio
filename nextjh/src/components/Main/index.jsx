@@ -4,14 +4,14 @@ import SkillsComponent from "./Skills/Component";
 import Link from "./Link";
 import Project from "./Project";
 
-const MainComponent = () => {
+const MainComponent = ({ aboutRef, skillRef, linkRef, projectRef }) => {
   return (
     <div>
       <IntroComponent />
-      <DetailComponent />
-      <SkillsComponent />
-      <Link />
-      <Project />
+      <DetailComponent aboutRef={aboutRef} />
+      <SkillsComponent skillRef={skillRef} />
+      <Link linkRef={linkRef} />
+      <Project projectRef={projectRef} />
     </div>
   );
 };

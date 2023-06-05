@@ -8,7 +8,7 @@ const IntroComponent = () => {
         <div>장정현</div>
       </div>
       <div>
-        <div>아뇽하세요</div>
+        <div>안녕하세요~!</div>
         <div>다양한 경험을 하기 위해 달리고 있는 백엔드 개발자 입니다</div>
         <div>성실함을 겸비하여 전문성을 높이고자 합니다</div>
       </div>

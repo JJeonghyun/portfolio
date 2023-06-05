@@ -1,10 +1,11 @@
 import styled from "styled-components";
+
 import ItemComponent from "./Item/Component";
 
-const DetailComponent = () => {
+const DetailComponent = ({ aboutRef }) => {
   return (
     <AboutMeContainer>
-      <div>about me</div>
+      <div ref={aboutRef}>about me</div>
       <div>
         <ItemComponent />
       </div>

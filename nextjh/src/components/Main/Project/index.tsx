@@ -5,11 +5,11 @@ import NFTMarket from "./NFTMarket";
 import Tesla from "./Tesla";
 import U2vibe from "./U2vibe";
 
-const Project = () => {
+const Project = ({ projectRef }: { projectRef: any }) => {
   return (
     <ProjectContainer>
       <div>
-        <div>Project</div>
+        <div ref={projectRef}>Project</div>
         <div>
           <Solar />
           <NFTMarket />

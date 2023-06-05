@@ -7,11 +7,11 @@ import Contract from "./Contract/Component";
 import Tools from "./Tools/Component";
 import Deployment from "./Deploy/Component";
 
-const SkillsComponent = () => {
+const SkillsComponent = ({ skillRef }) => {
   return (
     <SkillsContainer>
       <div>
-        <div>SKILLS</div>
+        <div ref={skillRef}>SKILLS</div>
         <div>
           <FrontEnd />
           <BackEnd />

@@ -4,11 +4,11 @@ import Github from "./Github/Component";
 import Notion from "./Notion/Component";
 import Tistory from "./Tistory/Component";
 
-const Link = () => {
+const Link = ({ linkRef }: { linkRef: any }) => {
   return (
     <LinkContainer>
       <div>
-        <div>Link</div>
+        <div ref={linkRef}>Link</div>
         <div>
           <Github />
           <Notion />
