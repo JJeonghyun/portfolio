@@ -31,7 +31,7 @@ const SkillsContainer = styled.div`
   background-color: rgba(167, 64, 86, 1);
   & > div {
     padding: 35px 0;
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
     & > div:first-child {
       width: fit-content;
@@ -45,12 +45,21 @@ const SkillsContainer = styled.div`
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: colunm;
+      @media only screen and (max-width: 426px) {
+        justify-content: center;
+      }
       & > div {
         width: 30%;
         margin: 20px 0 10px 0;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 2px 2px 2px 2px white;
+        @media only screen and (max-width: 768px) {
+          width: 45%;
+        }
+        @media only screen and (max-width: 426px) {
+          width: 80%;
+        }
         & > div {
           width: 90%;
           margin: 0 auto;
@@ -75,6 +84,10 @@ const SkillsContainer = styled.div`
             width: 100%;
             padding: 20px 5px;
           }
+        }
+        &:hover {
+          transform: translateY(-10px);
+          transition: all 0.5s;
         }
       }
     }

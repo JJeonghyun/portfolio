@@ -58,14 +58,31 @@ const InfoContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  @media only screen and (max-width: 426px) {
+    justify-content: center;
+  }
   & > div {
     width: 30%;
     display: flex;
     padding: 15px 0;
-    & > div:first-child {
-      margin: 0 20px;
-      & > img {
+    @media only screen and (max-width: 768px) {
+      width: 50%;
+    }
+    @media only screen and (max-width: 426px) {
+      width: 80%;
+    }
+    & > div {
+      width: 49%;
+      margin: 0 auto;
+      &:first-child {
         width: 50px;
+        margin: 0;
+        & > img {
+          width: 100%;
+        }
+      }
+      & > div {
+        width: 100%;
       }
     }
   }

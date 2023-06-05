@@ -29,7 +29,7 @@ const ProjectContainer = styled.div`
   color: white;
   & > div {
     padding: 35px 0;
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
     & > div:first-child {
       width: fit-content;
@@ -43,6 +43,9 @@ const ProjectContainer = styled.div`
       justify-content: space-between;
       color: black;
       flex-wrap: wrap;
+      @media only screen and (max-width: 768px) {
+        justify-content: center;
+      }
       & > div {
         width: 100%;
         margin: 20px 0 0 0;
@@ -69,8 +72,15 @@ const ProjectContainer = styled.div`
           justify-content: space-between;
           align-items: center;
           padding: 50px 0;
+          @media only screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
           & > div {
             width: 48%;
+            @media only screen and (max-width: 768px) {
+              width: 80%;
+            }
             & > div {
               & > img {
                 width: 100%;
@@ -138,7 +148,7 @@ const ProjectContainer = styled.div`
                   padding: 5px 0;
                   text-decoration: none;
                   &:visited {
-                    color: black;
+                    color: blue;
                   }
                 }
               }

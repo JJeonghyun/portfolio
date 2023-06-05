@@ -9,6 +9,7 @@ export default function Home() {
   const skillRef = useRef<HTMLDivElement | null>(null);
   const linkRef = useRef<HTMLDivElement | null>(null);
   const projectRef = useRef<HTMLDivElement | null>(null);
+  const careerRef = useRef<HTMLDivElement | null>(null);
 
   const moveAboutScroll = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -23,6 +24,9 @@ export default function Home() {
   const moveProjectScroll = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+  const moveCareerScroll = () => {
+    careerRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div>
@@ -31,12 +35,15 @@ export default function Home() {
         moveSkillScroll={moveSkillScroll}
         moveLinkScroll={moveLinkScroll}
         moveProjectScroll={moveProjectScroll}
+        moveCareerScroll={moveCareerScroll}
       />
       <MainComponent
         aboutRef={aboutRef}
         skillRef={skillRef}
         linkRef={linkRef}
         projectRef={projectRef}
+        careerRef={careerRef}
+        moveAboutScroll={moveAboutScroll}
       />
       <FooterComponent />
     </div>

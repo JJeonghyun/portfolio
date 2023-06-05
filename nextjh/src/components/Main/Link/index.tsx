@@ -27,7 +27,7 @@ const LinkContainer = styled.div`
   color: white;
   & > div {
     padding: 35px 0;
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
     & > div:first-child {
       width: fit-content;
@@ -40,6 +40,10 @@ const LinkContainer = styled.div`
       display: flex;
       justify-content: space-between;
       color: black;
+      @media only screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       img {
         width: 40px;
         padding: 0 10px 0 0;
@@ -50,6 +54,10 @@ const LinkContainer = styled.div`
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 2px 2px 2px 2px white;
+        padding: 3% 0;
+        @media only screen and (max-width: 768px) {
+          width: 55%;
+        }
         & > div {
           width: 90%;
           margin: 0 auto;

@@ -3,15 +3,24 @@ import DetailComponent from "./Detail/Component";
 import SkillsComponent from "./Skills/Component";
 import Link from "./Link";
 import Project from "./Project";
+import Career from "./Career";
 
-const MainComponent = ({ aboutRef, skillRef, linkRef, projectRef }) => {
+const MainComponent = ({
+  aboutRef,
+  skillRef,
+  linkRef,
+  projectRef,
+  careerRef,
+  moveAboutScroll,
+}) => {
   return (
     <div>
-      <IntroComponent />
+      <IntroComponent moveAboutScroll={moveAboutScroll} />
       <DetailComponent aboutRef={aboutRef} />
       <SkillsComponent skillRef={skillRef} />
       <Link linkRef={linkRef} />
       <Project projectRef={projectRef} />
+      <Career careerRef={careerRef} />
     </div>
   );
 };

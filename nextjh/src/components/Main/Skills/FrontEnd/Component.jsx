@@ -10,7 +10,6 @@ const FrontEnd = () => {
       <div>
         <img src="/imgs/stack/front/bootstrap icon.png" alt="" />
         <img src="/imgs/stack/front/web3js.jpg" alt="" />
-        <img src="/imgs/stack/back/ts.jpg" alt="" />
       </div>
       <div>
         <img src="/imgs/stack/front/redux.png" alt="" />
