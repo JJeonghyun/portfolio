@@ -7,7 +7,7 @@ import Contract from "./Contract/Component";
 import Tools from "./Tools/Component";
 import Deployment from "./Deploy/Component";
 
-const SkillsComponent = ({ skillRef }) => {
+const SkillsComponent = ({ skillRef }: { skillRef: any }) => {
   return (
     <SkillsContainer>
       <div>

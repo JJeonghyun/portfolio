@@ -1,22 +1,28 @@
 import styled from "styled-components";
-import TypeWriter from "typewriter-effect";
+import TypeWriter, { Options } from "typewriter-effect";
 
-const stackArr = ["BackEnd", "Nodejs", "DataBase", "FrontEnd", "React"];
+const stackArr: string[] = [
+  "BackEnd",
+  "Nodejs",
+  "DataBase",
+  "FrontEnd",
+  "React",
+];
 
-const IntroComponent = ({ moveAboutScroll }) => {
+const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
+  const options: Options = {
+    strings: stackArr,
+    autoStart: true,
+    loop: true,
+    typeSpeed: 200,
+    backSpeed: 100,
+  };
+
   return (
     <IntroContainer>
       <div>
         <div>
-          <TypeWriter
-            options={{
-              strings: stackArr,
-              autoStart: true,
-              loop: true,
-              typeSpeed: 200,
-              backSpeed: 100,
-            }}
-          />
+          <TypeWriter options={options} />
           Developer
         </div>
         <div>장정현</div>

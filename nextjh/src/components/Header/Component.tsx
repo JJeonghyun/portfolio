@@ -1,26 +1,48 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 
+import Category from "./Category/Component";
+
 const HeaderComponent = ({
   moveAboutScroll,
   moveSkillScroll,
   moveLinkScroll,
   moveProjectScroll,
   moveCareerScroll,
+  open,
+  toggleFunc,
+}: {
+  moveAboutScroll: any;
+  moveSkillScroll: any;
+  moveLinkScroll: any;
+  moveProjectScroll: any;
+  moveCareerScroll: any;
+  open: any;
+  toggleFunc: any;
 }) => {
   const [currentScroll, setCurrentScroll] = useState(0);
+  const [currentWidth, setCurrentWidth] = useState(0);
   const scrollToUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const changeScroll = () => {
     setCurrentScroll(window.scrollY || document.documentElement.scrollTop);
   };
+  const changeWidth = () => {
+    setCurrentWidth(window.innerWidth);
+  };
   useEffect(() => {
     window.addEventListener("scroll", changeScroll);
+    window.addEventListener("resize", changeWidth);
   });
+
   return (
     <>
-      <HeaderContainer className={currentScroll > 0 ? "changeScroll" : ""}>
+      <HeaderContainer
+        className={
+          currentScroll > 0 || currentWidth < 426 ? "changeScroll" : ""
+        }
+      >
         <div>
           <div
             onClick={() => {
@@ -29,44 +51,32 @@ const HeaderComponent = ({
           >
             JJH's Portfolio
           </div>
-          <div>
-            <div
-              onClick={() => {
-                moveAboutScroll();
-              }}
-            >
-              About me
-            </div>
-            <div
-              onClick={() => {
-                moveSkillScroll();
-              }}
-            >
-              Skills
-            </div>
-            <div
-              onClick={() => {
-                moveLinkScroll();
-              }}
-            >
-              Link
-            </div>
-            <div
-              onClick={() => {
-                moveProjectScroll();
-              }}
-            >
-              Projects
-            </div>
-            <div
-              onClick={() => {
-                moveCareerScroll();
-              }}
-            >
-              Career
-            </div>
+          <Category
+            moveAboutScroll={moveAboutScroll}
+            moveSkillScroll={moveSkillScroll}
+            moveLinkScroll={moveLinkScroll}
+            moveProjectScroll={moveProjectScroll}
+            moveCareerScroll={moveCareerScroll}
+          />
+          <div
+            onClick={() => {
+              toggleFunc();
+            }}
+          >
+            <img src="/imgs/app.png" alt="" />
           </div>
         </div>
+        {open ? (
+          <Category
+            moveAboutScroll={moveAboutScroll}
+            moveSkillScroll={moveSkillScroll}
+            moveLinkScroll={moveLinkScroll}
+            moveProjectScroll={moveProjectScroll}
+            moveCareerScroll={moveCareerScroll}
+          />
+        ) : (
+          <></>
+        )}
       </HeaderContainer>
       {currentScroll > 0 ? (
         <ToUpBnt
@@ -89,17 +99,25 @@ const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 5;
   & > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    margin: 0 15%;
+    width: 80%;
+    margin: 0 10%;
     padding: 15px 0;
     font-size: 1.5rem;
     color: rgba(0, 0, 0, 0.75);
     @media only screen and (max-width: 426px) {
-      justify-content: flex-start;
+      justify-content: space-between;
+    }
+    &:nth-child(2) {
+      align-items: flex-start;
+      flex-direction: column;
+      & > div {
+        padding: 5px 0;
+      }
     }
 
     & > div:first-child {
@@ -116,7 +134,7 @@ const HeaderContainer = styled.div`
         font-size: 2rem;
       }
     }
-    & > div:last-child {
+    & > div:nth-child(2) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -135,6 +153,16 @@ const HeaderContainer = styled.div`
         @media only screen and (max-width: 1024px) {
           margin: 0;
           padding: 0 5px;
+        }
+      }
+    }
+    & > div:last-child {
+      display: none;
+      @media only screen and (max-width: 426px) {
+        display: block;
+        width: 30px;
+        & > img {
+          width: 100%;
         }
       }
     }

@@ -29,7 +29,7 @@ const ProjectContainer = styled.div`
   color: white;
   & > div {
     padding: 35px 0;
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     & > div:first-child {
       width: fit-content;

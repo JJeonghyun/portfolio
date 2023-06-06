@@ -58,6 +58,9 @@ const LinkContainer = styled.div`
         @media only screen and (max-width: 768px) {
           width: 55%;
         }
+        @media only screen and (max-width: 320px) {
+          width: 80%;
+        }
         & > div {
           width: 90%;
           margin: 0 auto;

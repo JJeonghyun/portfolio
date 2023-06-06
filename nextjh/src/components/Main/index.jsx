@@ -1,6 +1,6 @@
 import IntroComponent from "./Intro/Component";
 import DetailComponent from "./Detail/Component";
-import SkillsComponent from "./Skills/Component";
+import SkillsComponent from "./Skills";
 import Link from "./Link";
 import Project from "./Project";
 import Career from "./Career";
