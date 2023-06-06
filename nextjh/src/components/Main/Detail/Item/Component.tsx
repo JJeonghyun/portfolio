@@ -1,35 +1,42 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Image from "next/image";
+import userImg from "/public/imgs/user.png";
+import calendarImg from "/public/imgs/calendar.png";
+import locationImg from "/public/imgs/location.png";
+import telephoneCallImg from "/public/imgs/telephone-call.png";
+import emailImg from "/public/imgs/email.png";
+import graduationHatImg from "/public/imgs/graduation-hat.png";
 
 const ItemComponent = () => {
   const [info, _] = useState([
     {
-      img: "/imgs/user.png",
+      img: userImg,
       name: "이름",
       text: "장정현",
     },
     {
-      img: "/imgs/calendar.png",
+      img: calendarImg,
       name: "생년월일",
       text: "94.02.14",
     },
     {
-      img: "/imgs/location.png",
+      img: locationImg,
       name: "주소",
       text: "위례신도시",
     },
     {
-      img: "/imgs/telephone-call.png",
+      img: telephoneCallImg,
       name: "연락처",
       text: "010-2052-9649",
     },
     {
-      img: "/imgs/email.png",
+      img: emailImg,
       name: "이메일",
       text: "ghkdwja9649@gmail.com",
     },
     {
-      img: "/imgs/graduation-hat.png",
+      img: graduationHatImg,
       name: "학력",
       text: "대진대학교",
     },
@@ -39,7 +46,7 @@ const ItemComponent = () => {
       {info?.map((item, index) => (
         <div key={`item-outer-${index}`}>
           <div key={`first-item-${index}`}>
-            <img src={item.img} alt="" key={`item-img-${index}`} />
+            <Image src={item.img} alt="" key={`item-img-${index}`} />
           </div>
           <div key={`second-item-outer-${index}`}>
             <div key={`first-inner-item-${index}`}>{item.name}</div>
@@ -79,6 +86,7 @@ const InfoContainer = styled.div`
         margin: 0;
         & > img {
           width: 100%;
+          height: auto;
         }
       }
       & > div {

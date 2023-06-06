@@ -4,6 +4,7 @@ import Solar from "./Solar";
 import NFTMarket from "./NFTMarket";
 import Tesla from "./Tesla";
 import U2vibe from "./U2vibe";
+import ClonePaging from "./ClonePaging";
 
 const Project = ({ projectRef }: { projectRef: any }) => {
   return (
@@ -15,6 +16,7 @@ const Project = ({ projectRef }: { projectRef: any }) => {
           <NFTMarket />
           <Tesla />
           <U2vibe />
+          <ClonePaging />
         </div>
       </div>
     </ProjectContainer>
@@ -84,12 +86,14 @@ const ProjectContainer = styled.div`
             & > div {
               & > img {
                 width: 100%;
+                height: auto;
               }
               &:last-child {
                 width: 50%;
                 margin: 0 auto;
                 img {
                   width: 100%;
+                  height: auto;
                 }
               }
             }

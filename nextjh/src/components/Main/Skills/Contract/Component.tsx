@@ -1,16 +1,24 @@
+import Image from "next/image";
+import solidityImg from "public/imgs/stack/contract/solidity.jpg";
+import remixImg from "public/imgs/stack/contract/remix.png";
+import truffleImg from "public/imgs/stack/contract/truffle.svg";
+import ganacheImg from "public/imgs/stack/contract/ganache.jpg";
+import ipfsImg from "public/imgs/stack/contract/ipfs.png";
+import ubuntuImg from "public/imgs/stack/contract/ubuntu.jpg";
+
 const Contract = () => {
   return (
     <div>
       <div>Contract</div>
       <div>
-        <img src="/imgs/stack/contract/solidity.jpg" alt="" />
-        <img src="/imgs/stack/contract/remix.png" alt="" />
-        <img src="/imgs/stack/contract/truffle.svg" alt="" />
+        <Image src={solidityImg} alt="" />
+        <Image src={remixImg} alt="" />
+        <Image src={truffleImg} alt="" />
       </div>
       <div>
-        <img src="/imgs/stack/contract/ganache.jpg" alt="" />
-        <img src="/imgs/stack/contract/ipfs.png" alt="" />
-        <img src="/imgs/stack/contract/ubuntu.jpg" alt="" />
+        <Image src={ganacheImg} alt="" />
+        <Image src={ipfsImg} alt="" />
+        <Image src={ubuntuImg} alt="" />
       </div>
     </div>
   );

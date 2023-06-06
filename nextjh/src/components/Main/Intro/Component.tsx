@@ -14,8 +14,7 @@ const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
     strings: stackArr,
     autoStart: true,
     loop: true,
-    typeSpeed: 200,
-    backSpeed: 100,
+    delay: 200,
   };
 
   return (

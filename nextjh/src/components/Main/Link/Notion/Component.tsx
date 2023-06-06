@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
+import notionImg from "public/imgs/stack/etc/notion.jpg";
 
 const Notion = () => {
   return (
     <div>
       <div>
-        {" "}
-        <img src="/imgs/stack/etc/notion.jpg" />
+        <Image src={notionImg} alt="" placeholder="blur" />
         Notion
       </div>
       <div>

@@ -1,5 +1,8 @@
 import Link from "next/link";
 import MainFunc from "./Func/MainFunc";
+import Image from "next/image";
+import defiScanImg from "/public/imgs/solar/defiScan.jpg";
+import responseImg from "/public/imgs/solar/response.jpg";
 
 const Solar = () => {
   return (
@@ -10,10 +13,10 @@ const Solar = () => {
         <div>
           <div>
             <div>
-              <img src="/imgs/solar/defiScan.jpg" alt="" />
+              <Image src={defiScanImg} alt="" />
             </div>
             <div>
-              <img src="/imgs/solar/response.jpg" alt="" />
+              <Image src={responseImg} alt="" />
             </div>
           </div>
           <div>

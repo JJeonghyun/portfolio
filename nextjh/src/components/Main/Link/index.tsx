@@ -46,6 +46,7 @@ const LinkContainer = styled.div`
       }
       img {
         width: 40px;
+        height: auto;
         padding: 0 10px 0 0;
       }
       & > div {

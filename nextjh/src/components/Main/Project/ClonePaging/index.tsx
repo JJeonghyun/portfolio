@@ -1,5 +1,7 @@
 import Link from "next/link";
 import MainFunc from "./Func/MainFunc";
+import Image from "next/image";
+import MondayKizImg from "/public/imgs/ClonePaging/MondayKiz.jpg";
 
 const MondayKiz = () => {
   return (
@@ -10,7 +12,7 @@ const MondayKiz = () => {
         <div>
           <div>
             <div>
-              <img src="/imgs/ClonePaging/MondayKiz.jpg" alt="" />
+              <Image src={MondayKizImg} alt="" />
             </div>
           </div>
           <div>

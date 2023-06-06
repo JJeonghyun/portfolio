@@ -1,14 +1,20 @@
+import Image from "next/image";
+import codeImg from "public/imgs/stack/etc/code.png";
+import gitImg from "public/imgs/stack/etc/git.png";
+import postmanImg from "public/imgs/stack/etc/postman.png";
+import githubSignImg from "public/imgs/stack/etc/github-sign.png";
+
 const Tools = () => {
   return (
     <div>
       <div>Tools</div>
       <div>
-        <img src="/imgs/stack/etc/code.png" alt="" />
-        <img src="/imgs/stack/etc/git.png" alt="" />
-        <img src="/imgs/stack/etc/postman.png" alt="" />
+        <Image src={codeImg} alt="" />
+        <Image src={gitImg} alt="" />
+        <Image src={postmanImg} alt="" />
       </div>
       <div>
-        <img src="/imgs/stack/etc/github-sign.png" alt="" />
+        <Image src={githubSignImg} alt="" />
       </div>
     </div>
   );

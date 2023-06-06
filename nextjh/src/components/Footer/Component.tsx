@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
+import gitHubImg from "/public/imgs/github.png";
+import tistoryWhiteImg from "/public/imgs/tistoryWhite.png";
+import notionWhiteImg from "/public/imgs/notionWhite.jpg";
+import instagramWhiteImg from "/public/imgs/instagramWhite.png";
 
 const FooterComponent = () => {
   return (
@@ -7,12 +12,12 @@ const FooterComponent = () => {
       <div>
         <div>
           <Link href={`https://github.com/JJeonghyun`} passHref>
-            <img src="/imgs/github.png" alt="" />
+            <Image src={gitHubImg} alt="" />
           </Link>
         </div>
         <div>
           <Link href={`https://developerjjh.tistory.com`} passHref>
-            <img src="/imgs/tistoryWhite.png" alt="" />
+            <Image src={tistoryWhiteImg} alt="" />
           </Link>
         </div>
         <div>
@@ -20,12 +25,12 @@ const FooterComponent = () => {
             href={`https://faithful-robe-ebf.notion.site/Portfolio-6015e8c66c534d97b482722d8c6ef96an`}
             passHref
           >
-            <img src="/imgs/notionWhite.jpg" alt="" />
+            <Image src={notionWhiteImg} alt="" />
           </Link>
         </div>
         <div>
           <Link href={`https://www.instagram.com/jhninano/`} passHref>
-            <img src="/imgs/instagramWhite.png" alt="" />
+            <Image src={instagramWhiteImg} alt="" />
           </Link>
         </div>
       </div>
@@ -57,6 +62,7 @@ const FooterContainer = styled.div`
 
         & > img {
           width: 100%;
+          height: auto;
         }
       }
     }

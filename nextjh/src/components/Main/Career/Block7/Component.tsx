@@ -1,8 +1,11 @@
+import Image from "next/image";
+import careerImg from "/public/imgs/careerImg-removebg-preview.png";
+
 const Block7 = () => {
   return (
     <div>
       <div>
-        <img src="/imgs/careerImg-removebg-preview.png" alt="" />
+        <Image src={careerImg} alt="" width={200} />
       </div>
       <div>
         <div>경일게임아카데미</div>

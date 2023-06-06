@@ -1,5 +1,7 @@
 import Link from "next/link";
 import MainFunc from "./Func/MainFunc";
+import Image from "next/image";
+import teslaImg from "public/imgs/tesla/tesla.jpg";
 
 const Tesla = () => {
   return (
@@ -10,7 +12,7 @@ const Tesla = () => {
         <div>
           <div>
             <div>
-              <img src="/imgs/tesla/tesla.jpg" alt="" />
+              <Image src={teslaImg} alt="" />
             </div>
           </div>
           <div>

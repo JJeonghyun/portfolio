@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
+import gitHubSignImg from "public/imgs/stack/etc/github-sign.png";
 
 const Github = () => {
   return (
     <div>
       <div>
-        <img src="/imgs/stack/etc/github-sign.png" />
+        <Image src={gitHubSignImg} alt="" placeholder="blur" />
         Github
       </div>
       <div>

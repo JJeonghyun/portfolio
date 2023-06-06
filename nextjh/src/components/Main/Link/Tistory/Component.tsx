@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
+import tistoryImg from "public/imgs/stack/etc/tistory.png";
 
 const Tistory = () => {
   return (
     <div>
       <div>
-        {" "}
-        <img src="/imgs/stack/etc/tistory.png" />
+        <Image src={tistoryImg} alt="" placeholder="blur" />
         Tistory
       </div>
       <div>

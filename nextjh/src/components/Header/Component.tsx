@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import Image from "next/image";
+import appImg from "/public/imgs/app.png";
 
 import Category from "./Category/Component";
 
@@ -49,7 +51,7 @@ const HeaderComponent = ({
               scrollToUp();
             }}
           >
-            JJH's Portfolio
+            JJH&#39;s Portfolio
           </div>
           <Category
             moveAboutScroll={moveAboutScroll}
@@ -63,7 +65,7 @@ const HeaderComponent = ({
               toggleFunc();
             }}
           >
-            <img src="/imgs/app.png" alt="" />
+            <Image src={appImg} alt="" />
           </div>
         </div>
         {open ? (
@@ -163,6 +165,7 @@ const HeaderContainer = styled.div`
         width: 30px;
         & > img {
           width: 100%;
+          height: auto;
         }
       }
     }

@@ -1,5 +1,8 @@
 import Link from "next/link";
 import MainFunc from "./Func/MainFunc";
+import Image from "next/image";
+import mintingImg from "public/imgs/nftmarket/minting.jpg";
+import detailImg from "public/imgs/nftmarket/detail.jpg";
 
 const NFTMarket = () => {
   return (
@@ -10,10 +13,10 @@ const NFTMarket = () => {
         <div>
           <div>
             <div>
-              <img src="/imgs/nftmarket/minting.jpg" alt="" />
+              <Image src={mintingImg} alt="" />
             </div>
             <div>
-              <img src="/imgs/nftmarket/detail.jpg" alt="" />
+              <Image src={detailImg} alt="" />
             </div>
           </div>
           <div>

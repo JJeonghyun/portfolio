@@ -43,6 +43,7 @@ const CareerContainer = styled.div`
           width: 30%;
           & > img {
             width: 100%;
+            height: auto;
           }
         }
         & > div:last-child {

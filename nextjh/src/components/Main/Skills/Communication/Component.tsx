@@ -1,11 +1,15 @@
+import Image from "next/image";
+import trelloImg from "public/imgs/stack/etc/trello.jpg";
+import notionImg from "public/imgs/stack/etc/notion.jpg";
+import sheetsImg from "public/imgs/stack/etc/sheets.png";
 const Communication = () => {
   return (
     <div>
       <div>Communication</div>
       <div>
-        <img src="/imgs/stack/etc/trello.jpg" alt="" />
-        <img src="/imgs/stack/etc/notion.jpg" alt="" />
-        <img src="/imgs/stack/etc/sheets.png" alt="" />
+        <Image src={trelloImg} alt="" />
+        <Image src={notionImg} alt="" />
+        <Image src={sheetsImg} alt="" />
       </div>
     </div>
   );

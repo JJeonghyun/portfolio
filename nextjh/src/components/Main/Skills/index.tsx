@@ -82,6 +82,7 @@ const SkillsContainer = styled.div`
           align-items: center;
           & > img {
             width: 100%;
+            height: auto;
             padding: 20px 5px;
           }
         }

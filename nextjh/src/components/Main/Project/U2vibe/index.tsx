@@ -1,5 +1,8 @@
 import Link from "next/link";
 import MainFunc from "./Func/MainFunc";
+import Image from "next/image";
+import u2vibeImg from "public/imgs/u2vibe/u2vibe main.jpg";
+import faviconImg from "public/imgs/u2vibe/u2vibefavicon.png";
 
 const U2vibe = () => {
   return (
@@ -10,8 +13,8 @@ const U2vibe = () => {
         <div>
           <div>
             <div>
-              <img src="/imgs/u2vibe/u2vibe main.jpg" alt="" />
-              <img src="/imgs/u2vibe/u2vibefavicon.png" alt="" />
+              <Image src={u2vibeImg} alt="" />
+              <Image src={faviconImg} alt="" />
             </div>
           </div>
           <div>

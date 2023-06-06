@@ -46,7 +46,6 @@ export default function Home() {
         moveProjectScroll={moveProjectScroll}
         moveCareerScroll={moveCareerScroll}
         open={open}
-        setOpen={setOpen}
         toggleFunc={toggleFunc}
       />
       <MainComponent
