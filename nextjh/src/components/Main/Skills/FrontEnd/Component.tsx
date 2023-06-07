@@ -6,6 +6,7 @@ import bootstrapImg from "public/imgs/stack/front/bootstrap icon.png";
 import web3jsImg from "public/imgs/stack/front/web3js.jpg";
 import reduxImg from "public/imgs/stack/front/redux.png";
 import reactImg from "public/imgs/stack/front/react.jpg";
+import nextjsImg from "public/imgs/stack/front/nextjs.jpg";
 
 const FrontEnd = () => {
   return (
@@ -19,10 +20,11 @@ const FrontEnd = () => {
       <div>
         <Image src={bootstrapImg} alt="" />
         <Image src={web3jsImg} alt="" />
+        <Image src={reduxImg} alt="" />
       </div>
       <div>
-        <Image src={reduxImg} alt="" />
         <Image src={reactImg} alt="" />
+        <Image src={nextjsImg} alt="" />
       </div>
       <div></div>
     </div>

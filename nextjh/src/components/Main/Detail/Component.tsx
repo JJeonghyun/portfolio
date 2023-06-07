@@ -24,7 +24,7 @@ const AboutMeContainer = styled.div`
     width: fit-content;
     margin: 0 auto;
     font-size: 2.5rem;
-    font-weight: 850;
+    font-weight: 800;
     border-bottom: 1px solid lightgray;
   }
   & > div:nth-child(2) {

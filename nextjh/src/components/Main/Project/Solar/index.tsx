@@ -9,7 +9,7 @@ const Solar = () => {
     <>
       <div>
         <div>SolarProject</div>
-        <div>2022.08 ~ 2023.05 (기업협약 프로젝트)</div>
+        <div>2022.04.03 ~ 2023.05.22 (기업협약 프로젝트)</div>
         <div>
           <div>
             <div>

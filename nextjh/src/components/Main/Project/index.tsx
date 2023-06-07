@@ -5,6 +5,7 @@ import NFTMarket from "./NFTMarket";
 import Tesla from "./Tesla";
 import U2vibe from "./U2vibe";
 import ClonePaging from "./ClonePaging";
+import Portfolio from "./Portfolio";
 
 const Project = ({ projectRef }: { projectRef: any }) => {
   return (
@@ -12,6 +13,7 @@ const Project = ({ projectRef }: { projectRef: any }) => {
       <div>
         <div ref={projectRef}>Project</div>
         <div>
+          <Portfolio />
           <Solar />
           <NFTMarket />
           <Tesla />
@@ -31,7 +33,7 @@ const ProjectContainer = styled.div`
   color: white;
   & > div {
     padding: 35px 0;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     & > div:first-child {
       width: fit-content;
@@ -60,12 +62,10 @@ const ProjectContainer = styled.div`
         }
         & > div:first-child {
           padding: 20px 0 15px 0;
-          font-size: 2.5rem;
           font-size: 2rem;
           font-weight: 800;
         }
         & > div:nth-child(2) {
-          font-size: 1.5rem;
           font-size: 1.2rem;
           color: gray;
           padding: 0 0 10px 0;
@@ -86,7 +86,7 @@ const ProjectContainer = styled.div`
               width: 80%;
             }
             & > div {
-              width: 50%;
+              width: 75%;
               margin: 0 auto;
               & > img:nth-child(1) {
                 width: 100%;
@@ -99,7 +99,6 @@ const ProjectContainer = styled.div`
             }
             & li {
               padding: 15px 0;
-              font-size: 1.5rem;
               font-weight: 850;
               font-size: 1.2rem;
             }
@@ -125,9 +124,7 @@ const ProjectContainer = styled.div`
               padding: 10px 0 0 0;
               display: flex;
               align-items: flex-start;
-              font-size: 1.3rem;
               font-size: 1rem;
-
               & > div:first-child {
                 width: 20%;
               }
@@ -149,7 +146,6 @@ const ProjectContainer = styled.div`
               padding: 10px 0 0 0;
               display: flex;
               align-items: center;
-              font-size: 1.3rem;
               font-size: 1rem;
 
               & > div:first-child {

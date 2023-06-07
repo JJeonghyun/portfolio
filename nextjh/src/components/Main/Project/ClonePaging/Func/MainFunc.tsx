@@ -4,29 +4,31 @@ const MainFunc = () => {
   return (
     <>
       <div>
-        <div>주요기능</div>
+        <div>순서</div>
         <div>
-          <div>회원가입, 로그인 기능 구현</div>
-          <div>음원 상세 페이지 댓글 기능 구현</div>
-          <div>음원 차트 페이지 구현</div>
-          <div>음원 업로드 기능</div>
-          <div>유저 개개인의 재생목록 생성 기능 구현</div>
-          <div>관리자 페이지</div>
+          <div>메인 페이지와 그 외 페이지들을 구상 및 구현</div>
+          <div>페이지 HTML&CSS 수정 및 보완 / JS 동적 기능 추가</div>
+          <div>추가적으로 필요한 페이지들 구상 및 구현</div>
+          <div>페이지 HTML&CSS 수정 및 보완 / JS 동적 기능 추가</div>
+          <div>전체 페이지 media query를 통한 반응형 웹페이지 구현</div>
+          <div>
+            반응형 웹 페이지 마무리 작업 및 버그 수정 & 미비한 작업 추가
+          </div>
         </div>
       </div>
       <div>
         <div>Github</div>
         <div>
-          <Link href={`https://github.com/JJeonghyun/NodejsProject`} passHref>
-            <div>https://github.com/JJeonghyun/NodejsProject</div>
+          <Link href={`https://github.com/JJeonghyun/SideProject`} passHref>
+            <div>https://github.com/JJeonghyun/SideProject</div>
           </Link>
         </div>
       </div>
       <div>
         <div>Link</div>
         <div>
-          <Link href={`http://u2vibe.jjh.block7.errorcode.help/`} passHref>
-            <div>U2Vibe</div>
+          <Link href={`https://u2vibe.unyieldingsoul.com/`} passHref>
+            <div>MondayKiz</div>
           </Link>
         </div>
       </div>

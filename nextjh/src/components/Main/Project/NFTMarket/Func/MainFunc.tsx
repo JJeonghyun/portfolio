@@ -23,7 +23,7 @@ const MainFunc = () => {
       <div>
         <div>Link</div>
         <div>
-          <Link href={`http://mintcho.jjh.block7.errorcode.help/`} passHref>
+          <Link href={`https://mintcho.unyieldingsoul.com/`} passHref>
             <div>MintchoNFT</div>
           </Link>
         </div>

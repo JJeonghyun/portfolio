@@ -50,13 +50,16 @@ const IntroContainer = styled.div`
   background-size: 100%;
   height: 80vh;
   width: 100%;
-  @media only screen and (max-width: 426px) {
+  @media only screen and (max-width: 768px) {
     background-size: cover;
   }
   & > div:first-child {
     padding: 10% 0 0 0;
+    @media only screen and (max-width: 768px) {
+      padding: 30% 0 0 0;
+    }
     @media only screen and (max-width: 426px) {
-      padding: 40% 0 0 0;
+      padding: 45% 0 0 0;
     }
     & > div {
       width: fit-content;
@@ -64,7 +67,7 @@ const IntroContainer = styled.div`
       font-size: 3rem;
       color: white;
       font-weight: 900;
-      @media only screen and (max-width: 426px) {
+      @media only screen and (max-width: 768px) {
         color: black;
       }
     }

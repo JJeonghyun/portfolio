@@ -25,7 +25,7 @@ const MainFunc = () => {
       <div>
         <div>Link</div>
         <div>
-          <Link href={`http://u2vibe.jjh.block7.errorcode.help/`} passHref>
+          <Link href={`https://u2vibe.unyieldingsoul.com/`} passHref>
             <div>U2Vibe</div>
           </Link>
         </div>
