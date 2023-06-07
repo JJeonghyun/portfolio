@@ -14,8 +14,6 @@ const Solar = () => {
           <div>
             <div>
               <Image src={defiScanImg} alt="" />
-            </div>
-            <div>
               <Image src={responseImg} alt="" />
             </div>
           </div>

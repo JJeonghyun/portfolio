@@ -60,11 +60,13 @@ const ProjectContainer = styled.div`
         }
         & > div:first-child {
           padding: 20px 0 15px 0;
+          font-size: 2.5rem;
           font-size: 2rem;
           font-weight: 800;
         }
         & > div:nth-child(2) {
-          font-size: 0.9rem;
+          font-size: 1.5rem;
+          font-size: 1.2rem;
           color: gray;
           padding: 0 0 10px 0;
         }
@@ -84,21 +86,22 @@ const ProjectContainer = styled.div`
               width: 80%;
             }
             & > div {
-              & > img {
+              width: 50%;
+              margin: 0 auto;
+              & > img:nth-child(1) {
                 width: 100%;
                 height: auto;
               }
-              &:last-child {
-                width: 50%;
-                margin: 0 auto;
-                img {
-                  width: 100%;
-                  height: auto;
-                }
+              & > img:nth-child(2) {
+                width: 80%;
+                height: auto;
               }
             }
             & li {
-              padding: 5px 0;
+              padding: 15px 0;
+              font-size: 1.5rem;
+              font-weight: 850;
+              font-size: 1.2rem;
             }
             &:last-child > div:nth-child(2) {
               width: fit-content;
@@ -122,6 +125,9 @@ const ProjectContainer = styled.div`
               padding: 10px 0 0 0;
               display: flex;
               align-items: flex-start;
+              font-size: 1.3rem;
+              font-size: 1rem;
+
               & > div:first-child {
                 width: 20%;
               }
@@ -143,6 +149,9 @@ const ProjectContainer = styled.div`
               padding: 10px 0 0 0;
               display: flex;
               align-items: center;
+              font-size: 1.3rem;
+              font-size: 1rem;
+
               & > div:first-child {
                 width: 20%;
               }

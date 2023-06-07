@@ -14,8 +14,6 @@ const NFTMarket = () => {
           <div>
             <div>
               <Image src={mintingImg} alt="" />
-            </div>
-            <div>
               <Image src={detailImg} alt="" />
             </div>
           </div>
