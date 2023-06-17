@@ -28,7 +28,7 @@ const MainFunc = () => {
       <div>
         <div>Link</div>
         <div>
-          <Link href={`https://solar.jaeko.block7.errorcode.help`} passHref>
+          <Link href={`https://defiscan.unyieldingsoul.com`} passHref>
             <div>SolarProject</div>
           </Link>
         </div>
