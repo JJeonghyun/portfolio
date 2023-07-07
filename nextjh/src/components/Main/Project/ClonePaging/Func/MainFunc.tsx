@@ -24,14 +24,14 @@ const MainFunc = () => {
           </Link>
         </div>
       </div>
-      <div>
+      {/* <div>
         <div>Link</div>
         <div>
           <Link href={`https://clonepaging.unyieldingsoul.com/`} passHref>
             <div>MondayKiz</div>
           </Link>
         </div>
-      </div>
+      </div> */}
       <div>
         <div>FrontEnd</div>
         <div> HTML5, CSS3, JavaScript, Bootstrap</div>

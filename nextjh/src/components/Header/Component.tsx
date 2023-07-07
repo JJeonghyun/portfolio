@@ -37,7 +37,6 @@ const HeaderComponent = ({
     window.addEventListener("scroll", changeScroll);
     window.addEventListener("resize", changeWidth);
   });
-
   return (
     <>
       <HeaderContainer

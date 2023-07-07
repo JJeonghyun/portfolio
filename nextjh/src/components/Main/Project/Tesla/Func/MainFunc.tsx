@@ -22,14 +22,15 @@ const MainFunc = () => {
           </Link>
         </div>
       </div>
-      <div>
+      {/* <div>
         <div>Link</div>
         <div>
           <Link href={`https://tesla.unyieldingsoul.com`} passHref>
             <div>Tesla</div>
           </Link>
+          
         </div>
-      </div>
+      </div> */}
       <div>
         <div>FrontEnd</div>
         <div>React, Redux, JavaScript styled-components</div>

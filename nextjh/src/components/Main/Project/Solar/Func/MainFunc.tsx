@@ -25,14 +25,14 @@ const MainFunc = () => {
           </Link>
         </div>
       </div>
-      <div>
+      {/* <div>
         <div>Link</div>
         <div>
           <Link href={`https://defiscan.unyieldingsoul.com`} passHref>
             <div>SolarProject</div>
           </Link>
         </div>
-      </div>
+      </div> */}
       <div>
         <div>FrontEnd</div>
         <div>
