@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Block7 from "./Block7/Component";
+import CrossCheck from "./CrossCheck/Components";
 
 const Career = ({ careerRef }: { careerRef: any }) => {
   return (
@@ -8,6 +9,7 @@ const Career = ({ careerRef }: { careerRef: any }) => {
       <div>
         <div ref={careerRef}>Career</div>
         <div>
+          <CrossCheck />
           <Block7 />
         </div>
       </div>
@@ -40,15 +42,15 @@ const CareerContainer = styled.div`
         width: 100%;
         padding: 30px 0;
         & > div:first-child {
-          width: 30%;
+          width: 25%;
           & > img {
-            width: 100%;
+            width: 95%;
             height: auto;
           }
         }
         & > div:last-child {
           border-left: 1px solid black;
-          width: 68%;
+          width: 73%;
           padding: 0 0 0 35px;
           & > div:first-child {
             font-size: 2rem;
@@ -59,8 +61,12 @@ const CareerContainer = styled.div`
             padding: 15px 0;
           }
           & > div:nth-child(3) {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: white;
+          }
+          & > div:nth-child(4) {
+            padding: 20px 0px;
+            font-size: 1rem;
           }
         }
       }

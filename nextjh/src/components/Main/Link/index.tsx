@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Github from "./Github/Component";
 import Notion from "./Notion/Component";
 import Tistory from "./Tistory/Component";
+import SNS from "./SNS/Component";
 
 const Link = ({ linkRef }: { linkRef: any }) => {
   return (
@@ -13,6 +14,7 @@ const Link = ({ linkRef }: { linkRef: any }) => {
           <Github />
           <Notion />
           <Tistory />
+          <SNS />
         </div>
       </div>
     </LinkContainer>
@@ -40,28 +42,27 @@ const LinkContainer = styled.div`
       display: flex;
       justify-content: space-between;
       color: black;
+      flex-wrap: wrap;
       @media only screen and (max-width: 768px) {
         flex-wrap: wrap;
         justify-content: center;
       }
       img {
-        width: 40px;
+        width: 70px;
         height: auto;
         padding: 0 10px 0 0;
       }
       & > div {
-        width: 30%;
+        width: 40%;
         margin: 20px 0 10px 0;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 2px 2px 2px 2px white;
         padding: 3% 0;
         @media only screen and (max-width: 768px) {
-          width: 55%;
+          width: 90%;
         }
-        @media only screen and (max-width: 320px) {
-          width: 80%;
-        }
+
         & > div {
           width: 90%;
           margin: 0 auto;

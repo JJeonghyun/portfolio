@@ -2,11 +2,11 @@ import styled from "styled-components";
 import TypeWriter, { Options } from "typewriter-effect";
 
 const stackArr: string[] = [
-  "BackEnd",
-  "Nodejs",
-  "DataBase",
-  "FrontEnd",
-  "React",
+  "BackEnd Developer",
+  "NodeJS Developer",
+  "Database Administration",
+  "DevOps",
+  "React Developer",
 ];
 
 const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
@@ -14,7 +14,7 @@ const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
     strings: stackArr,
     autoStart: true,
     loop: true,
-    delay: 200,
+    delay: 150,
   };
 
   return (
@@ -22,7 +22,6 @@ const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
       <div>
         <div>
           <TypeWriter options={options} />
-          Developer
         </div>
         <div>장정현</div>
       </div>
