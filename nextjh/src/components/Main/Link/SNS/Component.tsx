@@ -12,11 +12,11 @@ const SNS = () => {
       <div>
         <p>링크드인</p>
         <Link href={`https://www.linkedin.com/in/정현-장-8807a4260`} passHref>
-          JeongHyun's linkedin
+          JeongHyun&#39;s linkedin
         </Link>
         <p>인스타</p>
         <Link href={`https://www.instagram.com/jhninano/`} passHref>
-          JeongHyun's instagram
+          JeongHyun&#39;s instagram
         </Link>
       </div>
     </div>
