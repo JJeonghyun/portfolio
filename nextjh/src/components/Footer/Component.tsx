@@ -6,6 +6,7 @@ import tistoryWhiteImg from "/public/imgs/tistoryWhite.png";
 import notionWhiteImg from "/public/imgs/notionWhite.jpg";
 import instagramWhiteImg from "/public/imgs/instagramWhite.png";
 import linkedinWhiteImg from "/public/imgs/linkedinWhite.png";
+import RocketPunchImg from "/public/imgs/rocketPunchWhite.png";
 
 const FooterComponent = () => {
   return (
@@ -37,6 +38,11 @@ const FooterComponent = () => {
         <div>
           <Link href={`https://www.linkedin.com/in/정현-장-8807a4260`} passHref>
             <Image src={linkedinWhiteImg} alt="" />
+          </Link>
+        </div>
+        <div>
+          <Link href={`https://www.rocketpunch.com/@ghkdwja9649`} passHref>
+            <Image src={RocketPunchImg} alt="" />
           </Link>
         </div>
       </div>

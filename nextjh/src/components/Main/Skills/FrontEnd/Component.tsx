@@ -16,8 +16,6 @@ const FrontEnd = () => {
       <div>
         <Image src={reactImg} alt="" />
         <Image src={reduxImg} alt="" />
-      </div>
-      <div>
         <Image src={nextjsImg} alt="" />
       </div>
     </div>

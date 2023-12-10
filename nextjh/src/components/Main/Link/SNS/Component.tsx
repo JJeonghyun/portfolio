@@ -18,6 +18,10 @@ const SNS = () => {
         <Link href={`https://www.instagram.com/jhninano/`} passHref>
           JeongHyun&#39;s instagram
         </Link>
+        <p>로켓펀치</p>
+        <Link href={`https://www.rocketpunch.com/@ghkdwja9649`} passHref>
+          JeongHyun&#39;s RocketPunch
+        </Link>
       </div>
     </div>
   );
