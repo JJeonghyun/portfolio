@@ -10,7 +10,7 @@ jobs:
       - name: Checkout source code.
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: cd nextjh && yarn ci
+        run: cd nextjh && yarn install
       - name: Build
         run: cd nextjh && yarn run build
       - name: zip distributions
