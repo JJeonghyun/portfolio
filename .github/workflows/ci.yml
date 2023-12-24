@@ -9,12 +9,6 @@ jobs:
     steps:
       - name: Checkout source code.
         uses: actions/checkout@v3
-      - name: create env file
-        run: |
-          touch .env
-          cat << EOF >> .env
-          ${{ secrets.ENV }}
-          EOF
       - name: Install dependencies
         run: yarn ci
       - name: Build
@@ -26,7 +20,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
-        run: aws s3 cp --region ap-northeast-2 ./build.zip s3://portfolio/
+        run: aws s3 cp --region ap-northeast-2 ./build.zip s3://jjhportfolio/
       - name: AWS configure credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -39,4 +33,4 @@ jobs:
           --application-name portfolio-deploy \
           --deployment-config-name CodeDeployDefault.OneAtATime \
           --deployment-group-name jhfolio \
-          --s3-location bucket=portfolio,bundleType=zip,key=build.zip \
+          --s3-location bucket=jjhportfolio,bundleType=zip,key=build.zip \
