@@ -14,7 +14,7 @@ jobs:
       - name: Build
         run: cd nextjh && yarn run build
       - name: zip distributions
-        run: zip -r build.zip ./nextjh/build ./nextjh/appspec.yml ./nextjs/deploy.sh
+        run: zip -r build.zip ./nextjh/build ./nextjh/appspec.yml ./nextjh/deploy.sh
       - name: Sync Bucket
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
