@@ -4,15 +4,19 @@ const Category = ({
   moveLinkScroll,
   moveProjectScroll,
   moveCareerScroll,
+  currentScroll
 }: {
   moveAboutScroll: any;
   moveSkillScroll: any;
   moveLinkScroll: any;
   moveProjectScroll: any;
   moveCareerScroll: any;
+  currentScroll?:any;
 }) => {
   return (
-    <div>
+    <div className={
+      currentScroll > 0 ? "changeScroll" : ""
+    }>
       <div
         onClick={() => {
           moveAboutScroll();

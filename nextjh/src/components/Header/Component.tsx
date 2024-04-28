@@ -44,11 +44,16 @@ const HeaderComponent = ({
           currentScroll > 0 || currentWidth < 426 ? "changeScroll" : ""
         }
       >
-        <div>
+        <div  className={
+          currentScroll > 0 ? "changeScroll" : ""
+        }>
           <div
             onClick={() => {
               scrollToUp();
             }}
+            className={
+              currentScroll > 0 ? "changeScroll" : ""
+            }
           >
             JJH&#39;s Portfolio
           </div>
@@ -58,6 +63,7 @@ const HeaderComponent = ({
             moveLinkScroll={moveLinkScroll}
             moveProjectScroll={moveProjectScroll}
             moveCareerScroll={moveCareerScroll}
+            currentScroll={currentScroll}
           />
           <div
             onClick={() => {
@@ -102,15 +108,20 @@ const HeaderContainer = styled.div`
   width: 100%;
   z-index: 5;
   background-color : rgba(255,255,255,0);
+  .changeScroll {
+    background-color : rgba(255,255,255,1);
+  }
   & > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    margin: 0 10%;
-    padding: 15px 0;
+    width: 100%;
+    padding: 15px 10%;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 1);
+    .changeScroll {
+      color: rgba(0, 0, 0, 1);
+    }
     @media only screen and (max-width: 426px) {
       justify-content: space-between;
     }

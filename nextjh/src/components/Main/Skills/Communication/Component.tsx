@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 import Image from "next/image";
 import trelloImg from "public/imgs/stack/etc/trello.jpg";
 import notionImg from "public/imgs/stack/etc/notion.jpg";
@@ -7,18 +9,73 @@ import slackImg from "public/imgs/stack/etc/slack.png";
 
 const Communication = () => {
   return (
-    <div>
+    <InnerSkills>
       <div>Communication</div>
       <div>
-        <Image src={trelloImg} alt="" />
-        <Image src={notionImg} alt="" />
-        <Image src={sheetsImg} alt="" />
+        <Image src={slackImg} alt="" />
+      <Image src={sheetsImg} alt="" />
       </div>
       <div>
+        <Image src={trelloImg} alt="" />
+      <Image src={notionImg} alt="" />
         <Image src={discordImg} alt="" />
-        <Image src={slackImg} alt="" />
       </div>
-    </div>
+      
+    </InnerSkills>
   );
 };
 export default Communication;
+
+const InnerSkills = styled.div`
+  width: 30%;
+  height:250px;
+  margin: 20px 0 10px 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 2px 2px 2px 2px white;
+  @media only screen and (max-width: 768px) {
+    width: 45%;
+  }
+  @media only screen and (max-width: 426px) {
+    width: 80%;
+  }
+  & > div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  & > div:first-child {
+    width: 90%;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+    color: orange;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0 auto;
+  }
+  & > div:nth-child(2){
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    & > img {
+      width: 100%;
+      height: auto;
+      padding: 20px 5px;
+    }
+  }
+  & > div:nth-child(3){
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    & > img {
+      width: 100%;
+      height: auto;
+      padding: 20px 5px;
+    }
+  }
+  &:hover {
+    transform: translateY(-10px);
+    transition: all 0.5s;
+  }
+`

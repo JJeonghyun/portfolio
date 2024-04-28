@@ -1,24 +1,64 @@
+import styled from "styled-components";
+
 import Image from "next/image";
 import solidityImg from "public/imgs/stack/contract/solidity.png";
 import remixImg from "public/imgs/stack/contract/remix.png";
-import truffleImg from "public/imgs/stack/contract/truffle.svg";
-import ganacheImg from "public/imgs/stack/contract/ganache.png";
-import ipfsImg from "public/imgs/stack/contract/ipfs.png";
 
 const Contract = () => {
   return (
-    <div>
+    <InnerSkills>
       <div>Contract</div>
       <div>
         <Image src={solidityImg} alt="" />
-        <Image src={remixImg} alt="" />
       </div>
       <div>
-        <Image src={truffleImg} alt="" />
-        <Image src={ganacheImg} alt="" />
-        <Image src={ipfsImg} alt="" />
+        <Image src={remixImg} alt="" />
       </div>
-    </div>
+    </InnerSkills>
   );
 };
 export default Contract;
+
+const InnerSkills = styled.div`
+  width: 30%;
+  height:400px;
+  margin: 20px 0 10px 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 2px 2px 2px 2px white;
+  @media only screen and (max-width: 768px) {
+    width: 45%;
+  }
+  @media only screen and (max-width: 426px) {
+    width: 80%;
+  }
+  & > div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  & > div:first-child {
+    width: 90%;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+    color: orange;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0 auto;
+  }
+  & > div:nth-child(2),
+  & > div:nth-child(3){
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    & > img {
+      width: 100%;
+      height: auto;
+      padding: 20px 5px;
+    }
+  }
+  &:hover {
+    transform: translateY(-10px);
+    transition: all 0.5s;
+  }
+`
