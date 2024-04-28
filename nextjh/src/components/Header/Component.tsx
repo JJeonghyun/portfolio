@@ -101,6 +101,7 @@ const HeaderContainer = styled.div`
   top: 0;
   width: 100%;
   z-index: 5;
+  background-color : rgba(255,255,255,0);
   & > div {
     display: flex;
     justify-content: center;
@@ -109,7 +110,7 @@ const HeaderContainer = styled.div`
     margin: 0 10%;
     padding: 15px 0;
     font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(255, 255, 255, 1);
     @media only screen and (max-width: 426px) {
       justify-content: space-between;
     }

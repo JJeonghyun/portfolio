@@ -2,11 +2,10 @@ import styled from "styled-components";
 import TypeWriter, { Options } from "typewriter-effect";
 
 const stackArr: string[] = [
-  "BackEnd Developer",
-  "NodeJS Developer",
-  "Database Administration",
+  "백엔드 개발자",
+  "서버 개발자",
+  "웹 백엔드 개발자",
   "DevOps",
-  "React Developer",
 ];
 
 const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
@@ -27,8 +26,8 @@ const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
       </div>
       <div>
         <div>안녕하세요!</div>
-        <div>웹 백엔드 개발자를 향해 열심히 나아가는</div>
-        <div>성실하고 열정적인 개발자 입니다</div>
+        <div>매일 성장하는 것을 목표로 하는 웹 백엔드 개발자입니다.</div>
+        <div>새로운 기술을 배우는 것에 흥미를 느끼고 있습니다.</div>
       </div>
       <div
         onClick={() => {
@@ -44,7 +43,7 @@ const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
 export default IntroComponent;
 
 const IntroContainer = styled.div`
-  background-image: url("./imgs/backGround.jpg");
+  background-image: url("./imgs/notebook.png");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 80vh;
@@ -81,6 +80,7 @@ const IntroContainer = styled.div`
       width: fit-content;
       margin: 0 auto;
       font-size: 1.2rem;
+      color :white;
     }
   }
   & > div:last-child {
