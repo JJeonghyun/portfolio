@@ -2,32 +2,33 @@ import styled from "styled-components";
 
 import Image from "next/image";
 import amazonImg from "public/imgs/stack/etc/amazonWebservices.png";
-import jenkinsImg from "public/imgs/stack/etc/jenkins.jpg";
-import githubActionImg from "public/imgs/stack/etc/githubAction.png";
+import jenkinsImg from "public/imgs/stack/etc/jenkins.png";
+import githubActionImg from "public/imgs/stack/etc/github_action.png";
+
+const imgList = [amazonImg,jenkinsImg,githubActionImg];
 
 const Deployment = () => {
   return (
     <InnerSkills>
       <div>Deployment</div>
-      <div>
-        <Image src={amazonImg} alt="" />
-      </div>
-      <div>
-        <Image src={jenkinsImg} alt="" />
-        <Image src={githubActionImg} alt="" />
-      </div>
+      {imgList.map((item)=>(
+         <div>
+          <Image src={item} alt="" />
+       </div>
+      ))}
     </InnerSkills>
   );
 };
 export default Deployment;
 
 const InnerSkills = styled.div`
-width: 30%;
-height:250px;
+width: 90%;
+// height:fit-content;
 margin: 20px 0 10px 0;
 border-radius: 10px;
 background-color: rgba(255, 255, 255, 1);
 box-shadow: 2px 2px 2px 2px white;
+grid-area:deploy;
 @media only screen and (max-width: 768px) {
   width: 45%;
 }
@@ -47,20 +48,9 @@ box-shadow: 2px 2px 2px 2px white;
   font-weight: 800;
   margin: 0 auto;
 }
-& > div:nth-child(2){
+& > div:nth-child(n+1){
   display: flex;
-  width: 85%;
-  justify-content: center;
-  align-items: center;
-  & > img {
-    width: 100%;
-    height: auto;
-    padding: 20px 5px;
-  }
-}
-& > div:nth-child(3){
-  display: flex;
-  width: 40%;
+  width: 80%;
   justify-content: center;
   align-items: center;
   & > img {

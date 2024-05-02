@@ -41,9 +41,21 @@ const SkillsContainer = styled.div`
       border-bottom: 1px solid lightgray;
     }
     & > div:last-child {
-      display: inline-flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      // display: inline-flex;
+      // justify-content: space-between;
+      // flex-wrap: wrap;
+
+      display:grid;
+      grid-template-areas:
+        'frontend backend deploy'
+        'frontend backend deploy'
+        'tool backend communication'
+        'tool backend communication'
+        'tool contract communication'
+        '... contract ...';
+        
+       
+  
       
       @media only screen and (max-width: 426px) {
         justify-content: center;

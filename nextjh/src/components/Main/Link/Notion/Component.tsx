@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import notionImg from "public/imgs/stack/etc/notion.jpg";
+import notionImg from "public/imgs/stack/etc/notion.png";
 
 const Notion = () => {
   return (
