@@ -20,7 +20,7 @@ export default Career;
 
 const CareerContainer = styled.div`
   width: 100%;
-  background-color: rgba(155, 124, 186, 1);
+  background-color: rgba(58, 58, 60, 0.6);
   & > div {
     padding: 35px 0;
     width: 75%;

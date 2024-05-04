@@ -15,9 +15,9 @@ const BackEnd = () => {
   return (
     <InnerSkills>
       <div>BackEnd</div>
-      {imgList.map((item)=>(
-          <div>
-             <Image src={item} alt="" />
+      {imgList.map((item,i)=>(
+          <div key={`index-i-${i}`}>
+             <Image src={item} alt="" key={`index-i-innerImg-${i}`} />
          </div>
       ))}
     </InnerSkills>
@@ -53,7 +53,7 @@ const InnerSkills = styled.div`
   }
   & > div:nth-child(n+1){
     display: flex;
-    width: 80%;
+    width: 70%;
     justify-content: center;
     align-items: center;
     & > img {

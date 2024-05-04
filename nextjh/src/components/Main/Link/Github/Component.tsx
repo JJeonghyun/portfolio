@@ -7,11 +7,10 @@ const Github = () => {
     <div>
       <div>
         <Image src={gitHubSignImg} alt="" placeholder="blur" />
-        Github
       </div>
       <div>
         <Link href={`https://github.com/JJeonghyun`} passHref>
-          https://github.com/JJeonghyun
+          github.com/JJeonghyun
         </Link>
         <p>소스코드 저장소</p>
       </div>

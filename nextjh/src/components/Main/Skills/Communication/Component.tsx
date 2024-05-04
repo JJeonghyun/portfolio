@@ -13,10 +13,10 @@ const Communication = () => {
   return (
     <InnerSkills>
       <div>Communication</div>
-      {imgList.map((item)=>(
-        <div>
-          <Image src={item} alt="" />
-      </div>
+      {imgList.map((item,i)=>(
+           <div key={`index-i-${i}`}>
+           <Image src={item} alt="" key={`index-i-innerImg-${i}`} />
+       </div>
       ))}
     </InnerSkills>
   );
@@ -51,7 +51,7 @@ const InnerSkills = styled.div`
   }
   & > div:nth-child(n+1){
     display: flex;
-    width: 75%;
+    width: 70%;
     justify-content: center;
     align-items: center;
     & > img {

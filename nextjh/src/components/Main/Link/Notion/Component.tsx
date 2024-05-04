@@ -7,7 +7,6 @@ const Notion = () => {
     <div>
       <div>
         <Image src={notionImg} alt="" placeholder="blur" />
-        Notion
       </div>
       <div>
         {" "}

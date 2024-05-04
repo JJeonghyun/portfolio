@@ -13,10 +13,10 @@ const Tools = () => {
   return (
     <InnerSkills>
       <div>Tools</div>
-      {imgList.map((item)=>(
-        <div>
-          <Image src={item} alt="" />
-      </div>
+      {imgList.map((item,i)=>(
+          <div key={`index-i-${i}`}>
+             <Image src={item} alt="" key={`index-i-innerImg-${i}`} />
+         </div>
       ))}
     </InnerSkills>
   );

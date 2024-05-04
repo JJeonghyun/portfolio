@@ -7,12 +7,11 @@ const Tistory = () => {
     <div>
       <div>
         <Image src={tistoryImg} alt="" placeholder="blur" />
-        Tistory
       </div>
       <div>
         {" "}
         <Link href={`https://developerjjh.tistory.com/`} passHref>
-          https://developerjjh.tistory.com/
+          developerjjh.tistory.com/
         </Link>
         <p>조그만한 개인 개발일지 작성</p>
       </div>

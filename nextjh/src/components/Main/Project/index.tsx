@@ -29,7 +29,7 @@ export default Project;
 
 const ProjectContainer = styled.div`
   width: 100%;
-  background-color: rgba(35, 134, 170, 1);
+  background-color:rgba(95, 204, 144, 0.8);
   color: white;
   & > div {
     padding: 35px 0;

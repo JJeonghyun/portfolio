@@ -46,7 +46,7 @@ const FooterComponent = () => {
           </Link>
         </div>
       </div>
-      <div>Copyright ©2023, Jeong Hyun Jang All Rights Reserved.</div>
+      <div>Copyright ©2024, Jeong Hyun Jang All Rights Reserved.</div>
     </FooterContainer>
   );
 };

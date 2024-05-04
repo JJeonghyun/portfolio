@@ -19,9 +19,9 @@ const FrontEnd = () => {
         <Image src={CSSImg} alt="" />
         <Image src={JSImg} alt="" />
       </div>
-      {imgList.map((item)=>(
-        <div>
-          <Image src={item} alt="" className="main" />
+      {imgList.map((item,i)=>(
+        <div key={`index-i-${i}`}>
+          <Image src={item} alt="" className="main" key={`index-i-innerImg-${i}`} />
       </div>
       ))}
     </InnerSkills>
@@ -70,7 +70,7 @@ const InnerSkills = styled.div`
   & > div:nth-child(4),
   & > div:nth-child(5) {
     display: flex;
-    width: 80%;
+    width: 70%;
     justify-content: center;
     align-items: center;
     & > img {

@@ -28,7 +28,8 @@ export default SkillsComponent;
 
 const SkillsContainer = styled.div`
   width: 100%;
-  background-color: rgba(167, 64, 86, 1);
+  background-color:  rgba(255, 111, 97, 0.8);
+ 
   & > div {
     padding: 35px 0;
     width: 75%;
@@ -41,21 +42,14 @@ const SkillsContainer = styled.div`
       border-bottom: 1px solid lightgray;
     }
     & > div:last-child {
-      // display: inline-flex;
-      // justify-content: space-between;
-      // flex-wrap: wrap;
-
       display:grid;
+      justify-items: center;
       grid-template-areas:
         'frontend backend deploy'
-        'frontend backend deploy'
-        'tool backend communication'
+        'frontend backend communication'
         'tool backend communication'
         'tool contract communication'
-        '... contract ...';
-        
-       
-  
+        'tool contract ...';
       
       @media only screen and (max-width: 426px) {
         justify-content: center;

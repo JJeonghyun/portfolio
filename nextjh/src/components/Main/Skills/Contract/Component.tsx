@@ -10,10 +10,10 @@ const Contract = () => {
   return (
     <InnerSkills>
       <div>Contract</div>
-      {imgList.map((item)=>(
-         <div>
-         <Image src={item} alt="" />
-       </div>
+      {imgList.map((item,i)=>(
+          <div key={`index-i-${i}`}>
+             <Image src={item} alt="" key={`index-i-innerImg-${i}`} />
+         </div>
       ))}
     </InnerSkills>
   );
@@ -22,7 +22,6 @@ export default Contract;
 
 const InnerSkills = styled.div`
   width: 90%;
-  // height:fit-content;
   margin: 20px 0 10px 0;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
@@ -49,7 +48,7 @@ const InnerSkills = styled.div`
   }
   & > div:nth-child(n+1){
     display: flex;
-    width: 80%;
+    width: 70%;
     justify-content: center;
     align-items: center;
     & > img {
