@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 import Image from "next/image";
-import codeImg from "public/imgs/stack/etc/vscode.png";
 import gitImg from "public/imgs/stack/etc/git.png";
 import postmanImg from "public/imgs/stack/etc/postman.png";
 import githubSignImg from "public/imgs/stack/etc/github.png";
 import filezillaImg from "public/imgs/stack/etc/filezilla.jpeg";
 
-const imgList = [codeImg,gitImg,postmanImg,githubSignImg,filezillaImg];
+const imgList = [gitImg,postmanImg,githubSignImg,filezillaImg];
 
 const Tools = () => {
   return (
@@ -24,7 +23,7 @@ const Tools = () => {
 export default Tools;
 
 const InnerSkills = styled.div`
-width: 90%;
+width: 70%;
 margin: 20px 0 10px 0;
 border-radius: 10px;
 background-color: rgba(255, 255, 255, 1);
@@ -51,7 +50,7 @@ grid-area:tool;
 }
 & > div:nth-child(n+1){
   display: flex;
-  width: 75%;
+  width: 70%;
   justify-content: center;
   align-items: center;
   & > img {

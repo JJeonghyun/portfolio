@@ -34,17 +34,16 @@ const CareerContainer = styled.div`
     }
     & > div:last-child {
       width: 100%;
-
       & > div {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         width: 100%;
         padding: 30px 0;
         & > div:first-child {
-          width: 25%;
+          width: 20%;
           & > img {
-            width: 95%;
+            width: 100%;
             height: auto;
           }
         }

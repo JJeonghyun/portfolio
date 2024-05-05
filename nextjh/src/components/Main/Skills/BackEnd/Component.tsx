@@ -26,7 +26,7 @@ const BackEnd = () => {
 export default BackEnd;
 
 const InnerSkills = styled.div`
-  width: 90%;
+  width: 80%;
   margin: 20px 0 10px 0;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
@@ -53,7 +53,7 @@ const InnerSkills = styled.div`
   }
   & > div:nth-child(n+1){
     display: flex;
-    width: 70%;
+    width: 80%;
     justify-content: center;
     align-items: center;
     & > img {

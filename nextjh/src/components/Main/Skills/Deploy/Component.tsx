@@ -22,7 +22,7 @@ const Deployment = () => {
 export default Deployment;
 
 const InnerSkills = styled.div`
-width: 90%;
+width: 70%;
 margin: 20px 0 10px 0;
 border-radius: 10px;
 background-color: rgba(255, 255, 255, 1);

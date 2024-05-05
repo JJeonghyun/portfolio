@@ -45,11 +45,13 @@ const SkillsContainer = styled.div`
       display:grid;
       justify-items: center;
       grid-template-areas:
-        'frontend backend deploy'
-        'frontend backend communication'
-        'tool backend communication'
-        'tool contract communication'
-        'tool contract ...';
+      'backend deploy tool'
+      'backend deploy tool'
+      'backend frontend tool'
+      'backend frontend communication'
+      'backend contract communication'
+      'backend contract communication'
+      'backend ... communication';
       
       @media only screen and (max-width: 426px) {
         justify-content: center;

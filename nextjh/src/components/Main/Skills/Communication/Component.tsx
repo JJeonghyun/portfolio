@@ -4,10 +4,9 @@ import Image from "next/image";
 import trelloImg from "public/imgs/stack/etc/trello.png";
 import notionImg from "public/imgs/stack/etc/notion.png";
 import sheetsImg from "public/imgs/stack/etc/sheets.png";
-import discordImg from "public/imgs/stack/etc/disocrd.png";
 import slackImg from "public/imgs/stack/etc/slack.png";
 
-const imgList = [trelloImg,notionImg,sheetsImg,slackImg,discordImg];
+const imgList = [trelloImg,notionImg,sheetsImg,slackImg];
 
 const Communication = () => {
   return (
@@ -24,7 +23,7 @@ const Communication = () => {
 export default Communication;
 
 const InnerSkills = styled.div`
-  width: 90%;
+  width: 70%;
   margin: 20px 0 10px 0;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
@@ -51,7 +50,7 @@ const InnerSkills = styled.div`
   }
   & > div:nth-child(n+1){
     display: flex;
-    width: 70%;
+    width: 60%;
     justify-content: center;
     align-items: center;
     & > img {

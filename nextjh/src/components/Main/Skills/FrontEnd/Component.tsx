@@ -8,8 +8,6 @@ import reduxImg from "public/imgs/stack/front/redux.png";
 import reactImg from "public/imgs/stack/front/react.png";
 import nextjsImg from "public/imgs/stack/front/nextjs.jpg";
 
-const imgList=  [reactImg,reduxImg, nextjsImg];
-
 const FrontEnd = () => {
   return (
     <InnerSkills>
@@ -19,18 +17,20 @@ const FrontEnd = () => {
         <Image src={CSSImg} alt="" />
         <Image src={JSImg} alt="" />
       </div>
-      {imgList.map((item,i)=>(
-        <div key={`index-i-${i}`}>
-          <Image src={item} alt="" className="main" key={`index-i-innerImg-${i}`} />
+      <div>
+        <Image src={reactImg} alt="" />
+        <Image src={reduxImg} alt="" />
       </div>
-      ))}
+      <div>
+        <Image src={nextjsImg} alt="" />
+      </div>
     </InnerSkills>
   );
 };
 export default FrontEnd;
 
 const InnerSkills = styled.div`
-  width: 90%;
+  width: 70%;
   margin: 20px 0 10px 0;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
@@ -66,11 +66,20 @@ const InnerSkills = styled.div`
       padding: 20px 5px;
     }
   }
-  & > div:nth-child(3),
-  & > div:nth-child(4),
-  & > div:nth-child(5) {
+  & > div:nth-child(3) {
     display: flex;
-    width: 70%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    & > img {
+      width: 100%;
+      height: auto;
+      padding: 20px 5px;
+    }
+  }
+  & > div:nth-child(4) {
+    display: flex;
+    width: 80%;
     justify-content: center;
     align-items: center;
     & > img {
