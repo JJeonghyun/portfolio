@@ -6,6 +6,9 @@ import Tesla from "./Tesla";
 import U2vibe from "./U2vibe";
 import ClonePaging from "./ClonePaging";
 import Portfolio from "./Portfolio";
+import Initiative from "./Initiative";
+import Stiim from "./Stiim";
+import StockBox from "./StockBox";
 
 const Project = ({ projectRef }: { projectRef: any }) => {
   return (
@@ -13,6 +16,9 @@ const Project = ({ projectRef }: { projectRef: any }) => {
       <div>
         <div ref={projectRef}>Project</div>
         <div>
+          <StockBox />
+          <Stiim />
+          <Initiative />
           <Portfolio />
           <Solar />
           <NFTMarket />
@@ -29,7 +35,7 @@ export default Project;
 
 const ProjectContainer = styled.div`
   width: 100%;
-  background-color:rgba(95, 204, 144, 0.8);
+  background-color: rgba(95, 204, 144, 0.8);
   color: white;
   & > div {
     padding: 35px 0;
@@ -92,7 +98,7 @@ const ProjectContainer = styled.div`
                 width: 100%;
                 height: auto;
               }
-              & > img:nth-child(2) {
+              & > img:nth-child(n + 1) {
                 width: 80%;
                 height: auto;
               }
@@ -103,21 +109,6 @@ const ProjectContainer = styled.div`
               font-size: 1.2rem;
             }
             &:last-child > div:nth-child(2) {
-              width: fit-content;
-              background-color: rgba(0, 0, 0, 1);
-              color: white;
-              margin: 10px 0 0 0;
-              padding: 10px 20px;
-              border-radius: 10px;
-              & > a {
-                text-decoration: none;
-                color: white;
-                &:visited {
-                  color: white;
-                }
-              }
-            }
-            &:last-child > div:nth-child(3) {
               width: 95%;
               margin: 10px 0 0 0;
               border-top: 1px solid black;
@@ -135,12 +126,12 @@ const ProjectContainer = styled.div`
                 }
               }
             }
+            &:last-child > div:nth-child(3),
             &:last-child > div:nth-child(4),
             &:last-child > div:nth-child(5),
             &:last-child > div:nth-child(6),
             &:last-child > div:nth-child(7),
-            &:last-child > div:nth-child(8),
-            &:last-child > div:nth-child(9) {
+            &:last-child > div:nth-child(8) {
               width: 95%;
               margin: 10px 0 0 0;
               padding: 10px 0 0 0;
