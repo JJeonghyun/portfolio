@@ -9,16 +9,24 @@ import axiosImg from "public/imgs/stack/back/axios.png";
 import tsImg from "public/imgs/stack/back/ts.png";
 import sequelize from "public/imgs/stack/back/sequelize.png";
 
-const imgList=  [nodejsImg, mysqlImg, nodemonImg, pm2Img, axiosImg, tsImg, sequelize];
+const imgList = [
+  nodejsImg,
+  mysqlImg,
+  nodemonImg,
+  pm2Img,
+  axiosImg,
+  tsImg,
+  sequelize,
+];
 
 const BackEnd = () => {
   return (
     <InnerSkills>
       <div>BackEnd</div>
-      {imgList.map((item,i)=>(
-          <div key={`index-i-${i}`}>
-             <Image src={item} alt="" key={`index-i-innerImg-${i}`} />
-         </div>
+      {imgList.map((item, i) => (
+        <div key={`index-i-${i}`}>
+          <Image src={item} alt="" key={`index-i-innerImg-${i}`} />
+        </div>
       ))}
     </InnerSkills>
   );
@@ -31,7 +39,7 @@ const InnerSkills = styled.div`
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 2px 2px 2px 2px white;
-  grid-area:backend;
+  grid-area: backend;
   @media only screen and (max-width: 768px) {
     width: 45%;
   }
@@ -51,20 +59,20 @@ const InnerSkills = styled.div`
     font-weight: 800;
     margin: 0 auto;
   }
-  & > div:nth-child(n+1){
+  & > div:nth-child(n + 1) {
     display: flex;
     width: 80%;
     justify-content: center;
     align-items: center;
     & > img {
-      width: 100%;
+      width: 80%;
       height: auto;
       padding: 20px 5px;
     }
   }
- 
+
   &:hover {
     transform: translateY(-10px);
     transition: all 0.5s;
   }
-`
+`;

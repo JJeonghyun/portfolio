@@ -6,16 +6,16 @@ import notionImg from "public/imgs/stack/etc/notion.png";
 import sheetsImg from "public/imgs/stack/etc/sheets.png";
 import slackImg from "public/imgs/stack/etc/slack.png";
 
-const imgList = [trelloImg,notionImg,sheetsImg,slackImg];
+const imgList = [trelloImg, notionImg, sheetsImg, slackImg];
 
 const Communication = () => {
   return (
     <InnerSkills>
       <div>Communication</div>
-      {imgList.map((item,i)=>(
-           <div key={`index-i-${i}`}>
-           <Image src={item} alt="" key={`index-i-innerImg-${i}`} />
-       </div>
+      {imgList.map((item, i) => (
+        <div key={`index-i-${i}`}>
+          <Image src={item} alt="" key={`index-i-innerImg-${i}`} />
+        </div>
       ))}
     </InnerSkills>
   );
@@ -28,7 +28,7 @@ const InnerSkills = styled.div`
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 2px 2px 2px 2px white;
-  grid-area:communication;
+  grid-area: communication;
   @media only screen and (max-width: 768px) {
     width: 45%;
   }
@@ -48,13 +48,13 @@ const InnerSkills = styled.div`
     font-weight: 800;
     margin: 0 auto;
   }
-  & > div:nth-child(n+1){
+  & > div:nth-child(n + 1) {
     display: flex;
     width: 60%;
     justify-content: center;
     align-items: center;
     & > img {
-      width: 100%;
+      width: 80%;
       height: auto;
       padding: 20px 5px;
     }
@@ -63,4 +63,4 @@ const InnerSkills = styled.div`
     transform: translateY(-10px);
     transition: all 0.5s;
   }
-`
+`;

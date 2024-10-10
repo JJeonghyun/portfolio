@@ -35,7 +35,7 @@ const InnerSkills = styled.div`
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 2px 2px 2px 2px white;
-  grid-area:frontend;
+  grid-area: frontend;
   @media only screen and (max-width: 768px) {
     width: 45%;
   }
@@ -55,7 +55,7 @@ const InnerSkills = styled.div`
     font-weight: 800;
     margin: 0 auto;
   }
-  & > div:nth-child(2){
+  & > div:nth-child(2) {
     display: flex;
     width: 30%;
     justify-content: center;
@@ -83,7 +83,7 @@ const InnerSkills = styled.div`
     justify-content: center;
     align-items: center;
     & > img {
-      width: 100%;
+      width: 80%;
       height: auto;
       padding: 20px 5px;
     }
@@ -92,4 +92,4 @@ const InnerSkills = styled.div`
     transform: translateY(-10px);
     transition: all 0.5s;
   }
-`
+`;
