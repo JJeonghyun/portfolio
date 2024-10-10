@@ -22,14 +22,6 @@ const Tesla = () => {
                 웹페이지 개발
               </li>
             </ul>
-            <div>
-              <Link
-                href={`https://github.com/JJeonghyun/ReactProject`}
-                passHref
-              >
-                <div>자세히 보러가기</div>
-              </Link>
-            </div>
             <MainFunc />
           </div>
         </div>

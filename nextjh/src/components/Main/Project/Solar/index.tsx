@@ -33,14 +33,6 @@ const Solar = () => {
                 발행한 Token을 Airdrop 해줌으로써 적절한 보상이 이루어질 수 있다
               </li>
             </ul>
-            <div>
-              <Link
-                href={`https://github.com/JJeonghyun/SolarProject`}
-                passHref
-              >
-                <div>자세히 보러가기</div>
-              </Link>
-            </div>
             <MainFunc />
           </div>
         </div>

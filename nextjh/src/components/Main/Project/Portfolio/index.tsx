@@ -30,15 +30,6 @@ const Portfolio = () => {
                 계획에서 배포까지 경험
               </li>
             </ul>
-            <div
-              onClick={() => {
-                scrollToUp();
-              }}
-            >
-              <Link href={`#`} passHref>
-                <div>자세히 보러가기</div>
-              </Link>
-            </div>
             <MainFunc />
           </div>
         </div>

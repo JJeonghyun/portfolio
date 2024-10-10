@@ -28,11 +28,6 @@ const NFTMarket = () => {
                 등을 결합한 BlockChain 거래소 코딩으로 이전에 학습한 내용 복습
               </li>
             </ul>
-            <div>
-              <Link href={`https://github.com/yesla-yeom/MintchoNFT`} passHref>
-                <div>자세히 보러가기</div>
-              </Link>
-            </div>
             <MainFunc />
           </div>
         </div>
