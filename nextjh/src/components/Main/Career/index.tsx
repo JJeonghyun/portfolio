@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Block7 from "./Block7/Component";
 import CrossCheck from "./CrossCheck/Components";
+import QuantumData from "./QuantumData/Components";
 
 const Career = ({ careerRef }: { careerRef: any }) => {
   return (
@@ -9,6 +10,7 @@ const Career = ({ careerRef }: { careerRef: any }) => {
       <div>
         <div ref={careerRef}>Career</div>
         <div>
+          <QuantumData />
           <CrossCheck />
           <Block7 />
         </div>
@@ -20,7 +22,7 @@ export default Career;
 
 const CareerContainer = styled.div`
   width: 100%;
-  background-color: rgba(58, 58, 60, 0.6);
+  background-color: rgba(58, 58, 60, 0.2);
   & > div {
     padding: 35px 0;
     width: 75%;
@@ -58,14 +60,25 @@ const CareerContainer = styled.div`
           & > div:nth-child(2) {
             font-size: 1.2rem;
             padding: 15px 0;
+            color: grey;
           }
           & > div:nth-child(3) {
-            font-size: 1.2rem;
-            color: white;
           }
           & > div:nth-child(4) {
             padding: 20px 0px;
             font-size: 1rem;
+            font-weight: 600;
+            & > div:nth-child(2) {
+              padding: 10px 0px;
+            }
+            & > div:nth-child(3) {
+              padding: 0px 20px;
+              line-height: 40px;
+              & > div {
+                padding: 0px 10px;
+                font-weight: 500;
+              }
+            }
           }
         }
       }

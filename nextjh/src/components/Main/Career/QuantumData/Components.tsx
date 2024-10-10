@@ -1,17 +1,19 @@
 import Image from "next/image";
-import careerImg from "/public/imgs/CC_Signature_vertical.png";
 
-const CrossCheck = () => {
+import careerImg from "/public/imgs/QD_signature_vertical_black.png";
+
+const QuantumData = () => {
   return (
     <div>
       <div>
         <Image src={careerImg} alt="" width={150} />
       </div>
       <div>
-        <div>주식회사 크로스체크</div>
-        <div>2023.07 ~ 2024.10 (약 1년 3개월) </div>
+        <div>주식회사 퀀텀데이터</div>
+        <div>2024.08 ~ 2024.10 (약 3개월) </div>
         <div>
-          최고의 노하우와 기술력을 기반으로 고객과 함께 성장하는 STO 전문가 집단
+          고도화된 증권정보를 바탕으로 시장의 정보 비대칭성 해소 및 혁신을 위한
+          핀테크 엔터프라이즈
           <br />
         </div>
         <div>
@@ -25,11 +27,12 @@ const CrossCheck = () => {
               <br />
               - 간편(SNS) 가입 및 로그인 기능 설계 및 구현
               <br />
-              - 지도에 나타낼 행정구역 데이터 최적화
+              - 협업 파트너 회사 API ( 외부 API ) 연동 및 개발
               <br />
-              - STO 상품 정보 CRUD 기능 및 API 개발
+              - 전략 정보 조회 API 개발
               <br />
-              - STO 상품, 행정구역(지역)명, 지하철역 등 검색 기능 개발 <br />
+              - 전략명, 증시명 검색 기능 개발 <br />
+              - 기간별 특정 데이터에 대한 차트 이미지화 기능 개발 <br />
               - 본인인증 및 PG사 솔루션 연동 <br />
             </div>
             - 프로젝트 배포 및 운영 <br />
@@ -53,4 +56,4 @@ const CrossCheck = () => {
     </div>
   );
 };
-export default CrossCheck;
+export default QuantumData;
