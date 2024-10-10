@@ -5,9 +5,6 @@ import Main from "/public/imgs/Initiative/main.png";
 import Authentication from "/public/imgs/Initiative/authentication.png";
 
 const Initiative = () => {
-  const scrollToUp = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
   return (
     <>
       <div>

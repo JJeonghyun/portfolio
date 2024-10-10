@@ -1,4 +1,3 @@
-import Link from "next/link";
 import MainFunc from "./Func/MainFunc";
 import Image from "next/image";
 
@@ -6,9 +5,6 @@ import main from "/public/imgs/Stiim/main.png";
 import Login from "/public/imgs/Stiim/Login.png";
 
 const Stiim = () => {
-  const scrollToUp = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
   return (
     <>
       <div>

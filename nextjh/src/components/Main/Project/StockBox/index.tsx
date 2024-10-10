@@ -1,16 +1,12 @@
-import Link from "next/link";
 import MainFunc from "./Func/MainFunc";
 import Image from "next/image";
 
-import main from "/public/imgs/StockBox/main.png";
+import main from "/public/imgs/StockBox/Main.png";
 import Login from "/public/imgs/StockBox/Login.png";
 import Strategy from "/public/imgs/StockBox/Strategy.png";
 import Payment from "/public/imgs/StockBox/Payment.png";
 
 const StockBox = () => {
-  const scrollToUp = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
   return (
     <>
       <div>
