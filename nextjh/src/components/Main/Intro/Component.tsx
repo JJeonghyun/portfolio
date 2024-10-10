@@ -1,12 +1,7 @@
 import styled from "styled-components";
 import TypeWriter, { Options } from "typewriter-effect";
 
-const stackArr: string[] = [
-  "백엔드 개발자",
-  "서버 개발자",
-  "웹 백엔드 개발자",
-  "DevOps",
-];
+const stackArr: string[] = ["백엔드 개발자", "서버 개발자", "웹 백엔드 개발자"];
 
 const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
   const options: Options = {
@@ -80,7 +75,7 @@ const IntroContainer = styled.div`
       width: fit-content;
       margin: 0 auto;
       font-size: 1.2rem;
-      color :white;
+      color: white;
     }
   }
   & > div:last-child {
