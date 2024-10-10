@@ -16,7 +16,7 @@ const MainFunc = () => {
       <div>
         <div>Link</div>
         <div>
-          <Link href={`https://portfolio.unyieldingsoul.com/`} passHref>
+          <Link href={`https://jjh-portfolio.com/`} passHref>
             <div>Portfolio</div>
           </Link>
         </div>
