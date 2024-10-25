@@ -1,14 +1,8 @@
 import styled from "styled-components";
 
-import Solar from "./Solar";
-import NFTMarket from "./NFTMarket";
-import Tesla from "./Tesla";
-import U2vibe from "./U2vibe";
-import ClonePaging from "./ClonePaging";
-import Portfolio from "./Portfolio";
-import Initiative from "./Initiative";
-import Stiim from "./Stiim";
-import StockBox from "./StockBox";
+import Frame from "./Frame";
+
+import { projectList } from "./data/project";
 
 const Project = ({ projectRef }: { projectRef: any }) => {
   return (
@@ -16,15 +10,20 @@ const Project = ({ projectRef }: { projectRef: any }) => {
       <div>
         <div ref={projectRef}>Project</div>
         <div>
-          <StockBox />
-          <Stiim />
-          <Initiative />
-          <Portfolio />
-          <Solar />
-          <NFTMarket />
-          <Tesla />
-          <U2vibe />
-          <ClonePaging />
+          {projectList.map((item, index) => (
+            <>
+              <Frame
+                key={`frame-index-${index}`}
+                title={item.title}
+                period={item.peroid}
+                imgs={item.imgs}
+                description={item.description}
+                mainFunction={item.mainFunction}
+                link={item.link}
+                stack={item.stack}
+              />
+            </>
+          ))}
         </div>
       </div>
     </ProjectContainer>
