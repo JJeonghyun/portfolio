@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Frame from "./Frame";
+import Frame from './Frame';
 
-import { projectList } from "./data/project";
+import {projectList} from './data/project';
 
-const Project = ({ projectRef }: { projectRef: any }) => {
+const Project = ({projectRef}: {projectRef: any}) => {
   return (
     <ProjectContainer>
       <div>
@@ -34,8 +34,8 @@ export default Project;
 
 const ProjectContainer = styled.div`
   width: 100%;
-  background-color: rgba(95, 204, 144, 0.8);
-  color: white;
+  background-color: #fff5ee;
+  color: #e85d04;
   & > div {
     padding: 35px 0;
     width: 80%;
@@ -50,7 +50,7 @@ const ProjectContainer = styled.div`
     & > div:last-child {
       display: flex;
       justify-content: space-between;
-      color: black;
+      color: #495057;
       flex-wrap: wrap;
       @media only screen and (max-width: 768px) {
         justify-content: center;
@@ -81,6 +81,7 @@ const ProjectContainer = styled.div`
           justify-content: space-between;
           align-items: center;
           padding: 50px 0;
+
           @media only screen and (max-width: 768px) {
             flex-wrap: wrap;
             justify-content: center;
@@ -98,14 +99,14 @@ const ProjectContainer = styled.div`
                 height: auto;
               }
               & > img:nth-child(n + 1) {
-                width: 80%;
+                width: 85%;
                 height: auto;
               }
             }
             & li {
               padding: 15px 0;
               font-weight: 850;
-              font-size: 1.2rem;
+              color: #343a40;
             }
             &:last-child > div:nth-child(2) {
               width: 95%;

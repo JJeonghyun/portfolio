@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Github from "./Github/Component";
-import Notion from "./Notion/Component";
-import Tistory from "./Tistory/Component";
+import Github from './Github/Component';
+import Notion from './Notion/Component';
+import Tistory from './Tistory/Component';
 
-const Link = ({ linkRef }: { linkRef: any }) => {
+const Link = ({linkRef}: {linkRef: any}) => {
   return (
     <LinkContainer>
       <div>
@@ -23,13 +23,14 @@ export default Link;
 
 const LinkContainer = styled.div`
   width: 100%;
-  background-color: rgba(33, 33, 58, 0.8);
-  color: white;
+  background-color: #fffacd;
   & > div {
     padding: 35px 0;
     width: 75%;
     margin: 0 auto;
+
     & > div:first-child {
+      color: #dda0dd;
       width: fit-content;
       margin: 0 auto;
       font-size: 2.5rem;
@@ -70,7 +71,6 @@ const LinkContainer = styled.div`
           display: flex;
           align-items: center;
           padding: 20px 0;
-          color: black;
           font-size: 1.5rem;
           font-weight: 800;
           margin: 0 auto;
@@ -78,11 +78,12 @@ const LinkContainer = styled.div`
         & > div:nth-child(2) {
           & > a,
           & > a:visited {
-            color: blue;
+            color: #495057;
             text-decoration: none;
           }
           & > p {
             padding: 10px 0;
+            color: #495057;
             font-weight: 850;
           }
         }
