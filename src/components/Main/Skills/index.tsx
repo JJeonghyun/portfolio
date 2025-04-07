@@ -41,8 +41,7 @@ const SkillsContainer = styled.div`
     }
     & > div:last-child {
       padding: 20px;
-      width: fit-content;
-      margin: 0 auto;
+      width: 100%;
 
       @media only screen and (max-width: 426px) {
         justify-content: center;
