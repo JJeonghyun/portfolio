@@ -1,12 +1,13 @@
-import styled from "styled-components";
-import Link from "next/link";
-import Image from "next/image";
-import gitHubImg from "/public/imgs/github.png";
-import tistoryWhiteImg from "/public/imgs/tistoryWhite.png";
-import notionWhiteImg from "/public/imgs/notionWhite.jpg";
-import instagramWhiteImg from "/public/imgs/instagramWhite.png";
-import linkedinWhiteImg from "/public/imgs/linkedinWhite.png";
-import RocketPunchImg from "/public/imgs/rocketPunchWhite.png";
+import Image from 'next/image';
+import Link from 'next/link';
+import styled from 'styled-components';
+
+import gitHubImg from '/public/imgs/github.png';
+import instagramWhiteImg from '/public/imgs/instagramWhite.png';
+import linkedinWhiteImg from '/public/imgs/linkedinWhite.png';
+import notionWhiteImg from '/public/imgs/notionWhite.jpg';
+import RocketPunchImg from '/public/imgs/rocketPunchWhite.png';
+import tistoryWhiteImg from '/public/imgs/tistoryWhite.png';
 
 const FooterComponent = () => {
   return (
@@ -31,7 +32,7 @@ const FooterComponent = () => {
           </Link>
         </div>
         <div>
-          <Link href={`https://www.instagram.com/jhninano/`} passHref>
+          <Link href={`https://www.instagram.com/jh____0214/`} passHref>
             <Image src={instagramWhiteImg} alt="" />
           </Link>
         </div>
@@ -46,7 +47,7 @@ const FooterComponent = () => {
           </Link>
         </div>
       </div>
-      <div>Copyright ©2024, Jeong Hyun Jang All Rights Reserved.</div>
+      <div>Copyright ©2025, Jeong Hyun Jang All Rights Reserved.</div>
     </FooterContainer>
   );
 };
