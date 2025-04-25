@@ -5,7 +5,7 @@ import CrossCheck from './CrossCheck/Components';
 import QuantumData from './QuantumData/Components';
 import SmartShine from './SmartShine/Component';
 
-const Career = ({careerRef}: {careerRef: any}) => {
+const Career = ({careerRef}: {careerRef: React.RefObject<HTMLDivElement>}) => {
   return (
     <CareerContainer>
       <div>

@@ -4,7 +4,11 @@ import Frame from './Frame';
 
 import {projectList} from './data/project';
 
-const Project = ({projectRef}: {projectRef: any}) => {
+const Project = ({
+  projectRef,
+}: {
+  projectRef: React.RefObject<HTMLDivElement>;
+}) => {
   return (
     <ProjectContainer>
       <div>

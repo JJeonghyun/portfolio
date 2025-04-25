@@ -1,9 +1,20 @@
-import { useState, useEffect } from "react";
-import styled from "styled-components";
-import Image from "next/image";
-import appImg from "/public/imgs/app.png";
+import Image from 'next/image';
+import {useEffect, useState} from 'react';
+import styled from 'styled-components';
 
-import Category from "./Category/Component";
+import appImg from '/public/imgs/app.png';
+
+import Category from './Category/Component';
+
+interface HeaderComponentProps {
+  moveAboutScroll: () => void;
+  moveSkillScroll: () => void;
+  moveLinkScroll: () => void;
+  moveProjectScroll: () => void;
+  moveCareerScroll: () => void;
+  open: boolean;
+  toggleFunc: () => void;
+}
 
 const HeaderComponent = ({
   moveAboutScroll,
@@ -13,19 +24,11 @@ const HeaderComponent = ({
   moveCareerScroll,
   open,
   toggleFunc,
-}: {
-  moveAboutScroll: any;
-  moveSkillScroll: any;
-  moveLinkScroll: any;
-  moveProjectScroll: any;
-  moveCareerScroll: any;
-  open: any;
-  toggleFunc: any;
-}) => {
+}: HeaderComponentProps) => {
   const [currentScroll, setCurrentScroll] = useState(0);
   const [currentWidth, setCurrentWidth] = useState(0);
   const scrollToUp = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({top: 0, behavior: 'smooth'});
   };
   const changeScroll = () => {
     setCurrentScroll(window.scrollY || document.documentElement.scrollTop);
@@ -34,26 +37,22 @@ const HeaderComponent = ({
     setCurrentWidth(window.innerWidth);
   };
   useEffect(() => {
-    window.addEventListener("scroll", changeScroll);
-    window.addEventListener("resize", changeWidth);
-  });
+    window.addEventListener('scroll', changeScroll);
+    window.addEventListener('resize', changeWidth);
+  }, []);
   return (
     <>
       <HeaderContainer
         className={
-          currentScroll > 0 || currentWidth < 426 ? "changeScroll" : ""
+          currentScroll > 0 || currentWidth < 426 ? 'changeScroll' : ''
         }
       >
-        <div  className={
-          currentScroll > 0 ? "changeScroll" : ""
-        }>
+        <div className={currentScroll > 0 ? 'changeScroll' : ''}>
           <div
             onClick={() => {
               scrollToUp();
             }}
-            className={
-              currentScroll > 0 ? "changeScroll" : ""
-            }
+            className={currentScroll > 0 ? 'changeScroll' : ''}
           >
             JJH&#39;s Portfolio
           </div>
@@ -80,6 +79,7 @@ const HeaderComponent = ({
             moveLinkScroll={moveLinkScroll}
             moveProjectScroll={moveProjectScroll}
             moveCareerScroll={moveCareerScroll}
+            currentScroll={currentScroll}
           />
         ) : (
           <></>
@@ -107,9 +107,9 @@ const HeaderContainer = styled.div`
   top: 0;
   width: 100%;
   z-index: 5;
-  background-color : rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
   .changeScroll {
-    background-color : rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
   }
   & > div {
     display: flex;

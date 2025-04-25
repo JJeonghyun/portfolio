@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import TypeWriter, { Options } from "typewriter-effect";
+import styled from 'styled-components';
+import TypeWriter, {Options} from 'typewriter-effect';
 
-const stackArr: string[] = ["백엔드 개발자", "서버 개발자", "웹 백엔드 개발자"];
+const stackArr: string[] = ['백엔드 개발자', '서버 개발자', '웹 백엔드 개발자'];
 
-const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
+const IntroComponent = ({moveAboutScroll}: {moveAboutScroll: () => void}) => {
   const options: Options = {
     strings: stackArr,
     autoStart: true,
@@ -38,7 +38,7 @@ const IntroComponent = ({ moveAboutScroll }: { moveAboutScroll: any }) => {
 export default IntroComponent;
 
 const IntroContainer = styled.div`
-  background-image: url("./imgs/notebook.png");
+  background-image: url('./imgs/notebook.png');
   background-repeat: no-repeat;
   background-size: 100%;
   height: 80vh;

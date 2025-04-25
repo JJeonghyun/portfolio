@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 import ItemComponent from './Item/Component';
 
-const DetailComponent = ({aboutRef}: {aboutRef: any}) => {
+const DetailComponent = ({
+  aboutRef,
+}: {
+  aboutRef: React.RefObject<HTMLDivElement>;
+}) => {
   return (
     <AboutMeContainer>
       <div ref={aboutRef}>ABOUT ME</div>

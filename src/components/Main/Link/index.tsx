@@ -4,7 +4,7 @@ import Github from './Github/Component';
 import Notion from './Notion/Component';
 import Tistory from './Tistory/Component';
 
-const Link = ({linkRef}: {linkRef: any}) => {
+const Link = ({linkRef}: {linkRef: React.RefObject<HTMLDivElement>}) => {
   return (
     <LinkContainer>
       <div>

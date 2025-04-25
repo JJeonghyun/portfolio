@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 import {STACK_LIST} from './constant';
 
-const SkillsComponent = ({skillRef}: {skillRef: any}) => {
+const SkillsComponent = ({
+  skillRef,
+}: {
+  skillRef: React.RefObject<HTMLDivElement>;
+}) => {
   return (
     <SkillsContainer>
       <div>
