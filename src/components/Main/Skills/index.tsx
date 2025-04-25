@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {STACK_LIST} from './constant';
+import {STACK_LIST} from '../../../utils/contant';
 
 const SkillsComponent = ({
   skillRef,

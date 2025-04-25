@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import {INFO} from './contant';
+import {INFO} from '../../../utils/contant';
 
 const DetailComponent = ({
   aboutRef,

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Frame from './Frame';
 
-import {projectList} from './data/project';
+import {PROJECT_LIST} from '../../../utils/contant';
 
 const Project = ({
   projectRef,
@@ -14,7 +14,7 @@ const Project = ({
       <div>
         <div ref={projectRef}>Project</div>
         <div>
-          {projectList.map((item, index) => (
+          {PROJECT_LIST.map((item, index) => (
             <>
               <Frame
                 key={`frame-index-${index}`}

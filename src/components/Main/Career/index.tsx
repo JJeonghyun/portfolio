@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import {CAREER_DATA} from './contant';
+import {CAREER_DATA} from '../../../utils/contant';
 
 const Career = ({careerRef}: {careerRef: React.RefObject<HTMLDivElement>}) => {
   return (
