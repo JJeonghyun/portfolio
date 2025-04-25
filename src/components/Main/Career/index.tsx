@@ -1,9 +1,7 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 
-import Block7 from './Block7/Component';
-import CrossCheck from './CrossCheck/Components';
-import QuantumData from './QuantumData/Components';
-import SmartShine from './SmartShine/Component';
+import {CAREER_DATA} from './contant';
 
 const Career = ({careerRef}: {careerRef: React.RefObject<HTMLDivElement>}) => {
   return (
@@ -11,10 +9,33 @@ const Career = ({careerRef}: {careerRef: React.RefObject<HTMLDivElement>}) => {
       <div>
         <div ref={careerRef}>Career</div>
         <div>
-          <SmartShine />
-          <QuantumData />
-          <CrossCheck />
-          <Block7 />
+          {CAREER_DATA.map((career, index) => (
+            <div key={index}>
+              <div>
+                <Image
+                  src={career.img}
+                  alt={career.alt || ''}
+                  width={career.width}
+                />
+              </div>
+              <div>
+                <div>{career.company}</div>
+                <div>{career.period}</div>
+                <div>{career.description}</div>
+                <div>
+                  <div>{career.position}</div>
+                  <div>{career.job}</div>
+                  {career.jobList && (
+                    <div>
+                      {career.jobList.map((job, idx) => (
+                        <div key={idx}>{job}</div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </CareerContainer>
