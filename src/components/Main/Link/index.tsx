@@ -1,25 +1,39 @@
 import styled from 'styled-components';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import Github from './Github/Component';
-import Notion from './Notion/Component';
-import Tistory from './Tistory/Component';
+import {LINK_DATA} from './contant';
 
-const Link = ({linkRef}: {linkRef: React.RefObject<HTMLDivElement>}) => {
+const LinkComponent = ({
+  linkRef,
+}: {
+  linkRef: React.RefObject<HTMLDivElement>;
+}) => {
   return (
     <LinkContainer>
       <div>
         <div ref={linkRef}>Link</div>
         <div>
-          <Github />
-          <Notion />
-          <Tistory />
+          {LINK_DATA.map((item, index) => (
+            <div key={`outer-${index}`}>
+              <div key={`img-outer-${index}`}>
+                <Image key={`img-${index}`} src={item.img} alt="" width={100} />
+              </div>
+              <div key={`text-outer-${index}`}>
+                <Link key={`link-${index}`} href={item.link} passHref>
+                  {item.linkText}
+                </Link>
+                <p key={`p-${index}`}>{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </LinkContainer>
   );
 };
 
-export default Link;
+export default LinkComponent;
 
 const LinkContainer = styled.div`
   width: 100%;
@@ -47,8 +61,6 @@ const LinkContainer = styled.div`
         justify-content: center;
       }
       img {
-        width: 30%;
-        height: auto;
         padding: 0 10px 0 0;
       }
       & > div {
