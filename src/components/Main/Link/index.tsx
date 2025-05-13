@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import {LINK_DATA} from '../../../utils/contant';
+import {LINK_DATA} from '../../../utils/contants/link';
 
 const LinkComponent = ({
   linkRef,

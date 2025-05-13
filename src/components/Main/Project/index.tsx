@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Frame from './Frame';
 
-import {PROJECT_LIST} from '../../../utils/contant';
+import {PROJECT_LIST} from '../../../utils/contants/project';
 
 const Project = ({
   projectRef,

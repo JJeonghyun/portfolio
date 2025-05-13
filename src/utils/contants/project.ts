@@ -1,91 +1,19 @@
-import HTML_CSS_JSImg from '/public/imgs/stack/front/html_css_js_logo.png';
-import reduxImg from '/public/imgs/stack/front/redux.png';
-import reactImg from '/public/imgs/stack/front/react.png';
-import nextjsImg from '/public/imgs/stack/front/nextjs.png';
-
-import axiosImg from '/public/imgs/stack/back/axios.png';
-import nodejsImg from '/public/imgs/stack/back/node js icon.png';
-import sequelize from '/public/imgs/stack/back/sequelize.png';
-import tsImg from '/public/imgs/stack/back/ts.png';
-import mysqlImg from '/public/imgs/stack/db/mysql.png';
-
-import trelloImg from '/public/imgs/stack/etc/trello.png';
-import notionImg from '/public/imgs/stack/etc/notion.png';
-import sheetsImg from '/public/imgs/stack/etc/sheets.png';
-import slackImg from '/public/imgs/stack/etc/slack.png';
-
-import gitImg from '/public/imgs/stack/etc/git.png';
-import postmanImg from '/public/imgs/stack/etc/postman.png';
-import githubSignImg from '/public/imgs/stack/etc/github.png';
-import filezillaImg from '/public/imgs/stack/etc/filezilla.jpeg';
-
-import amazonImg from '/public/imgs/stack/etc/amazonWebservices.png';
-import jenkinsImg from '/public/imgs/stack/etc/jenkins.png';
-import githubActionImg from '/public/imgs/stack/etc/github_action.png';
-
-import stockBoxLogin from '/public/imgs/StockBox/Login.png';
-import stockBoxMain from '/public/imgs/StockBox/Main.png';
-import stockBoxPayment from '/public/imgs/StockBox/Payment.png';
-
-import stiimLogin from '/public/imgs/Stiim/Login.png';
-import stiimMain from '/public/imgs/Stiim/main.png';
-
-import initiativeAuthentication from '/public/imgs/Initiative/authentication.png';
-import initiativeMain from '/public/imgs/Initiative/main.png';
-
-import PortfolioImg from '/public/imgs/portfolio/portfolio.jpg';
-
-import defiScanImg from '/public/imgs/solar/defiScan.jpg';
-
-import detailImg from '/public/imgs/nftmarket/detail.jpg';
-import mintingImg from '/public/imgs/nftmarket/minting.jpg';
-
-import teslaImg from '/public/imgs/tesla/tesla.jpg';
-
-import u2vibeImg from '/public/imgs/u2vibe/u2vibe main.jpg';
-
-import MondayKizImg from '/public/imgs/ClonePaging/MondayKiz.jpg';
-
-import tistoryImg from '/public/imgs/stack/etc/tistory.png';
-import gitHubSignImg from '/public/imgs/stack/etc/github.png';
-
-import calendarImg from '/public/imgs/calendar.png';
-import emailImg from '/public/imgs/email.png';
-import graduationHatImg from '/public/imgs/graduation-hat.png';
-import locationImg from '/public/imgs/location.png';
-import telephoneCallImg from '/public/imgs/telephone-call.png';
-import userImg from '/public/imgs/user.png';
-
-import logo from '/public/imgs/careerImg-removebg-preview.png';
-import crosscheckLogo from '/public/imgs/CC_Signature_vertical.png';
-import smartLogo from '/public/imgs/logo_b.svg';
-import quantumLogo from '/public/imgs/QD_signature_vertical_black.png';
-
-export const STACK_LIST = [
-  {
-    title: 'FrontEnd',
-    imgList: [HTML_CSS_JSImg, reduxImg, reactImg, nextjsImg],
-  },
-
-  {
-    title: 'BackEnd',
-    imgList: [nodejsImg, mysqlImg, axiosImg, tsImg, sequelize],
-  },
-
-  {
-    title: 'Communication',
-    imgList: [trelloImg, notionImg, sheetsImg, slackImg],
-  },
-
-  {
-    title: 'Tools',
-    imgList: [gitImg, postmanImg, githubSignImg, filezillaImg],
-  },
-  {
-    title: 'Deployment',
-    imgList: [amazonImg, jenkinsImg, githubActionImg],
-  },
-];
+import {
+  stockBoxLogin,
+  stockBoxMain,
+  stockBoxPayment,
+  stiimLogin,
+  stiimMain,
+  initiativeAuthentication,
+  initiativeMain,
+  PortfolioImg,
+  defiScanImg,
+  mintingImg,
+  detailImg,
+  teslaImg,
+  u2vibeImg,
+  MondayKizImg,
+} from './imgs';
 
 export const PROJECT_LIST = [
   {
@@ -363,128 +291,5 @@ export const PROJECT_LIST = [
         list: 'AWS EC2, AWS Route 53, Filezilla',
       },
     ],
-  },
-];
-
-export const LINK_DATA = [
-  {
-    img: gitHubSignImg,
-    link: 'https://github.com/JJeonghyun',
-    linkText: 'github.com/JJeonghyun',
-    description: '소스코드 저장소',
-  },
-  {
-    img: notionImg,
-    link: 'https://faithful-robe-ebf.notion.site/Portfolio-6015e8c66c534d97b482722d8c6ef96an',
-    linkText: 'MyNotion',
-    description: '개인 포트폴리오 및 개발R&D',
-  },
-  {
-    img: tistoryImg,
-    link: 'https://developerjjh.tistory.com/',
-    linkText: 'developerjjh.tistory.com/',
-    description: '조그만한 개인 개발일지 작성',
-  },
-];
-
-export const INFO = [
-  {
-    img: userImg,
-    name: '이름',
-    text: '장정현',
-  },
-  {
-    img: calendarImg,
-    name: '생년월일',
-    text: '94.02.14',
-  },
-  {
-    img: locationImg,
-    name: '주소',
-    text: '위례신도시',
-  },
-  {
-    img: telephoneCallImg,
-    name: '연락처',
-    text: '010-2052-9649',
-  },
-  {
-    img: emailImg,
-    name: '이메일',
-    text: 'ghkdwja9649@gmail.com',
-  },
-  {
-    img: graduationHatImg,
-    name: '학력',
-    text: '대진대학교',
-  },
-];
-
-export const CAREER_DATA = [
-  {
-    img: smartLogo,
-    alt: '스마트샤인',
-    width: 150,
-    company: '주식회사 스마트샤인',
-    period: '2024.12 ~ (재직중)',
-    description: '전문 인력과 스마트 기술의 결합, 완벽한 객실관리의 시작',
-    position: '소속 : 본사 IT부서',
-    job: '주요업무 :',
-    jobList: [
-      '- 백엔드 / 프론트 개발',
-      '- UI/UX 최적화 및 사용자 경험 개선',
-      '- 기존 플랫폼 유지 및 보수',
-      '- API 통합 및 관리',
-      '- 서버 데이터베이스 및 보안 관리',
-      '- 그 외 제반 IT 업무',
-    ],
-  },
-  {
-    img: quantumLogo,
-    alt: '퀀텀데이터',
-    width: 150,
-    company: '주식회사 퀀텀데이터',
-    period: '2024.08 ~ 2024.10 (약 3개월)',
-    description:
-      '고도화된 증권 정보를 바탕으로 시장의 정보 비대칭성 해소 및 혁신을 위한 핀테크 엔터프라이즈',
-    position: '소속 : 플랫폼실 백엔드 개발자',
-    job: '주요업무 :',
-    jobList: [
-      '- 플랫폼 백엔드 아키텍처 설계 및 개발',
-      '- 전반적인 API 설계 및 개발 수행',
-      '- 데이터베이스 설계 및 최적화',
-      '- 본인 인증 (Nice 솔루션) 도입 및 개발',
-      '- 결제 (PG사) 솔루션 도입',
-      '- GitHub Actions를 통한 빌드 및 배포 자동화',
-      '- HTTPS 보안 설정',
-    ],
-  },
-  {
-    img: crosscheckLogo,
-    company: '주식회사 크로스체크',
-    width: 150,
-    period: '2023.07 ~ 2024.10 (약 1년 3개월)',
-    description:
-      '최고의 노하우와 기술력을 기반으로 고객과 함께 성장하는 STO 전문가 집단',
-    position: '소속 : 플랫폼실 백엔드 개발자',
-    job: '주요업무 :',
-    jobList: [
-      '- 플랫폼 백엔드 아키텍처 설계 및 개발',
-      '- 전반적인 API 설계 및 개발 수행',
-      '- 데이터베이스 설계 및 최적화',
-      '- 본인 인증 (Nice 솔루션) 도입 및 개발',
-      '- 결제 (PG사) 솔루션 도입',
-      '- GitHub Actions를 통한 빌드 및 배포 자동화',
-      '- HTTPS 보안 설정',
-    ],
-  },
-  {
-    img: logo,
-    alt: '경일게임아카데미',
-    width: 200,
-    company: '경일게임아카데미',
-    period: '2022.08.22 ~ 2023.05.30',
-    description: '블록체인 기반 핀테크 응용 SW개발자 양성과정',
-    job: '훈련 우수상 수상',
   },
 ];

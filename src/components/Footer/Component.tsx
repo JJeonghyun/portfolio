@@ -2,50 +2,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import gitHubImg from '/public/imgs/github.png';
-import instagramWhiteImg from '/public/imgs/instagramWhite.png';
-import linkedinWhiteImg from '/public/imgs/linkedinWhite.png';
-import notionWhiteImg from '/public/imgs/notionWhite.jpg';
-import RocketPunchImg from '/public/imgs/rocketPunchWhite.png';
-import tistoryWhiteImg from '/public/imgs/tistoryWhite.png';
+import {FOOTER_ITEM} from './../../utils/contants/footer';
 
 const FooterComponent = () => {
   return (
     <FooterContainer>
       <div>
-        <div>
-          <Link href={`https://github.com/JJeonghyun`} passHref>
-            <Image src={gitHubImg} alt="" />
-          </Link>
-        </div>
-        <div>
-          <Link href={`https://developerjjh.tistory.com`} passHref>
-            <Image src={tistoryWhiteImg} alt="" />
-          </Link>
-        </div>
-        <div>
-          <Link
-            href={`https://faithful-robe-ebf.notion.site/Portfolio-6015e8c66c534d97b482722d8c6ef96an`}
-            passHref
-          >
-            <Image src={notionWhiteImg} alt="" />
-          </Link>
-        </div>
-        <div>
-          <Link href={`https://www.instagram.com/jh____0214/`} passHref>
-            <Image src={instagramWhiteImg} alt="" />
-          </Link>
-        </div>
-        <div>
-          <Link href={`https://www.linkedin.com/in/정현-장-8807a4260`} passHref>
-            <Image src={linkedinWhiteImg} alt="" />
-          </Link>
-        </div>
-        <div>
-          <Link href={`https://www.rocketpunch.com/@ghkdwja9649`} passHref>
-            <Image src={RocketPunchImg} alt="" />
-          </Link>
-        </div>
+        {FOOTER_ITEM.map((item, index) => (
+          <div>
+            <Link
+              href={item.link}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src={item.img} alt={item.alt} />
+            </Link>
+          </div>
+        ))}
       </div>
       <div>Copyright ©2025, Jeong Hyun Jang All Rights Reserved.</div>
     </FooterContainer>
