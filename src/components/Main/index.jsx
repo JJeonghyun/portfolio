@@ -1,9 +1,9 @@
-import IntroComponent from "./Intro/Component";
-import DetailComponent from "./Detail/Component";
-import SkillsComponent from "./Skills";
-import Link from "./Link";
-import Project from "./Project";
-import Career from "./Career";
+import IntroComponent from './Intro/Component';
+import DetailComponent from './Detail/Component';
+import SkillsComponent from './Skills';
+import Link from './Link';
+import Project from './Project';
+import Career from './Career';
 
 const MainComponent = ({
   aboutRef,
@@ -11,11 +11,11 @@ const MainComponent = ({
   linkRef,
   projectRef,
   careerRef,
-  moveAboutScroll,
+  moveScroll,
 }) => {
   return (
     <div>
-      <IntroComponent moveAboutScroll={moveAboutScroll} />
+      <IntroComponent moveScroll={moveScroll} />
       <DetailComponent aboutRef={aboutRef} />
       <SkillsComponent skillRef={skillRef} />
       <Link linkRef={linkRef} />

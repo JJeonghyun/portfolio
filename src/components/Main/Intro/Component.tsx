@@ -3,7 +3,7 @@ import TypeWriter, {Options} from 'typewriter-effect';
 
 const stackArr: string[] = ['백엔드 개발자', '서버 개발자', '웹 백엔드 개발자'];
 
-const IntroComponent = ({moveAboutScroll}: {moveAboutScroll: () => void}) => {
+const IntroComponent = ({moveScroll}: {moveScroll: (ref: string) => void}) => {
   const options: Options = {
     strings: stackArr,
     autoStart: true,
@@ -26,7 +26,7 @@ const IntroComponent = ({moveAboutScroll}: {moveAboutScroll: () => void}) => {
       </div>
       <div
         onClick={() => {
-          moveAboutScroll();
+          moveScroll('about');
         }}
       >
         더 알아보기 ▼

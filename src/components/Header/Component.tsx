@@ -7,21 +7,13 @@ import appImg from '/public/imgs/app.png';
 import Category from './Category/Component';
 
 interface HeaderComponentProps {
-  moveAboutScroll: () => void;
-  moveSkillScroll: () => void;
-  moveLinkScroll: () => void;
-  moveProjectScroll: () => void;
-  moveCareerScroll: () => void;
+  moveScroll: (ref: string) => void;
   open: boolean;
   toggleFunc: () => void;
 }
 
 const HeaderComponent = ({
-  moveAboutScroll,
-  moveSkillScroll,
-  moveLinkScroll,
-  moveProjectScroll,
-  moveCareerScroll,
+  moveScroll,
   open,
   toggleFunc,
 }: HeaderComponentProps) => {
@@ -56,14 +48,7 @@ const HeaderComponent = ({
           >
             JJH&#39;s Portfolio
           </div>
-          <Category
-            moveAboutScroll={moveAboutScroll}
-            moveSkillScroll={moveSkillScroll}
-            moveLinkScroll={moveLinkScroll}
-            moveProjectScroll={moveProjectScroll}
-            moveCareerScroll={moveCareerScroll}
-            currentScroll={currentScroll}
-          />
+          <Category moveScroll={moveScroll} currentScroll={currentScroll} />
           <div
             onClick={() => {
               toggleFunc();
@@ -73,14 +58,7 @@ const HeaderComponent = ({
           </div>
         </div>
         {open ? (
-          <Category
-            moveAboutScroll={moveAboutScroll}
-            moveSkillScroll={moveSkillScroll}
-            moveLinkScroll={moveLinkScroll}
-            moveProjectScroll={moveProjectScroll}
-            moveCareerScroll={moveCareerScroll}
-            currentScroll={currentScroll}
-          />
+          <Category moveScroll={moveScroll} currentScroll={currentScroll} />
         ) : (
           <></>
         )}

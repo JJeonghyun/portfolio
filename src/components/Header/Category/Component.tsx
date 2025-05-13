@@ -1,51 +1,43 @@
 const Category = ({
-  moveAboutScroll,
-  moveSkillScroll,
-  moveLinkScroll,
-  moveProjectScroll,
-  moveCareerScroll,
+  moveScroll,
   currentScroll,
 }: {
-  moveAboutScroll: () => void;
-  moveSkillScroll: () => void;
-  moveLinkScroll: () => void;
-  moveProjectScroll: () => void;
-  moveCareerScroll: () => void;
+  moveScroll: (ref: string) => void;
   currentScroll: number;
 }) => {
   return (
     <div className={currentScroll > 0 ? 'changeScroll' : ''}>
       <div
         onClick={() => {
-          moveAboutScroll();
+          moveScroll('about');
         }}
       >
         About me
       </div>
       <div
         onClick={() => {
-          moveSkillScroll();
+          moveScroll('skill');
         }}
       >
         Skills
       </div>
       <div
         onClick={() => {
-          moveLinkScroll();
+          moveScroll('link');
         }}
       >
         Link
       </div>
       <div
         onClick={() => {
-          moveProjectScroll();
+          moveScroll('project');
         }}
       >
         Projects
       </div>
       <div
         onClick={() => {
-          moveCareerScroll();
+          moveScroll('career');
         }}
       >
         Career

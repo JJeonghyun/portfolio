@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import {useRef, useState} from 'react';
 
-import HeaderComponent from "../components/Header/Component";
-import MainComponent from "../components/Main";
-import FooterComponent from "../components/Footer/Component";
+import HeaderComponent from '../components/Header/Component';
+import MainComponent from '../components/Main';
+import FooterComponent from '../components/Footer/Component';
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -12,27 +12,18 @@ export default function Home() {
   const careerRef = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
 
-  const moveAboutScroll = () => {
-    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  const moveScroll = (ref: string) => {
+    if (ref === 'about') aboutRef.current?.scrollIntoView({behavior: 'smooth'});
+    if (ref === 'skill') skillRef.current?.scrollIntoView({behavior: 'smooth'});
+    if (ref === 'link') linkRef.current?.scrollIntoView({behavior: 'smooth'});
+    if (ref === 'project')
+      projectRef.current?.scrollIntoView({behavior: 'smooth'});
+    if (ref === 'career')
+      careerRef.current?.scrollIntoView({behavior: 'smooth'});
+
     setOpen(false);
   };
 
-  const moveSkillScroll = () => {
-    skillRef.current?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
-  };
-  const moveLinkScroll = () => {
-    linkRef.current?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
-  };
-  const moveProjectScroll = () => {
-    projectRef.current?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
-  };
-  const moveCareerScroll = () => {
-    careerRef.current?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
-  };
   const toggleFunc = () => {
     setOpen((state) => !state);
   };
@@ -40,11 +31,7 @@ export default function Home() {
   return (
     <div>
       <HeaderComponent
-        moveAboutScroll={moveAboutScroll}
-        moveSkillScroll={moveSkillScroll}
-        moveLinkScroll={moveLinkScroll}
-        moveProjectScroll={moveProjectScroll}
-        moveCareerScroll={moveCareerScroll}
+        moveScroll={moveScroll}
         open={open}
         toggleFunc={toggleFunc}
       />
@@ -54,7 +41,7 @@ export default function Home() {
         linkRef={linkRef}
         projectRef={projectRef}
         careerRef={careerRef}
-        moveAboutScroll={moveAboutScroll}
+        moveScroll={moveScroll}
       />
       <FooterComponent />
     </div>
