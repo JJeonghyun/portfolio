@@ -9,10 +9,10 @@ const FooterComponent = () => {
     <FooterContainer>
       <div>
         {FOOTER_ITEM.map((item, index) => (
-          <div>
+          <div key={`index-footer-${index}`}>
             <Link
               href={item.link}
-              key={index}
+              key={`index-footer-link-${index}`}
               target="_blank"
               rel="noopener noreferrer"
             >

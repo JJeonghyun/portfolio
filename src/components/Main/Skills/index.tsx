@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 import {STACK_LIST} from '../../../utils/contants/stack';
 
@@ -17,7 +18,7 @@ const SkillsComponent = ({
               <div key={`index-i-stackList-${i}`}>
                 <div key={`index-stackList-title-${i}`}>{item.title}</div>
                 {item.imgList.map((img, j) => (
-                  <img src={img.src} alt="" key={`index-j-img-${j}`} />
+                  <Image src={img.src} alt="" key={`index-j-img-${j}`} />
                 ))}
               </div>
             </div>
