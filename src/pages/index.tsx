@@ -13,12 +13,14 @@ export default function Home() {
   const [open, setOpen] = useState(false);
 
   const moveScroll = (ref: string) => {
-    if (ref === 'about') aboutRef.current?.scrollIntoView({behavior: 'smooth'});
-    if (ref === 'skill') skillRef.current?.scrollIntoView({behavior: 'smooth'});
-    if (ref === 'link') linkRef.current?.scrollIntoView({behavior: 'smooth'});
-    if (ref === 'project')
+    if (ref === 'About me')
+      aboutRef.current?.scrollIntoView({behavior: 'smooth'});
+    if (ref === 'Skills')
+      skillRef.current?.scrollIntoView({behavior: 'smooth'});
+    if (ref === 'Link') linkRef.current?.scrollIntoView({behavior: 'smooth'});
+    if (ref === 'Projects')
       projectRef.current?.scrollIntoView({behavior: 'smooth'});
-    if (ref === 'career')
+    if (ref === 'Career')
       careerRef.current?.scrollIntoView({behavior: 'smooth'});
 
     setOpen(false);

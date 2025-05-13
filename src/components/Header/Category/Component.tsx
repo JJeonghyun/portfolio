@@ -1,3 +1,5 @@
+const CATEGORY = ['About me', 'Skills', 'Link', 'Projects', 'Career'];
+
 const Category = ({
   moveScroll,
   currentScroll,
@@ -7,41 +9,17 @@ const Category = ({
 }) => {
   return (
     <div className={currentScroll > 0 ? 'changeScroll' : ''}>
-      <div
-        onClick={() => {
-          moveScroll('about');
-        }}
-      >
-        About me
-      </div>
-      <div
-        onClick={() => {
-          moveScroll('skill');
-        }}
-      >
-        Skills
-      </div>
-      <div
-        onClick={() => {
-          moveScroll('link');
-        }}
-      >
-        Link
-      </div>
-      <div
-        onClick={() => {
-          moveScroll('project');
-        }}
-      >
-        Projects
-      </div>
-      <div
-        onClick={() => {
-          moveScroll('career');
-        }}
-      >
-        Career
-      </div>
+      {CATEGORY.map((item) => (
+        <div
+          key={item}
+          onClick={() => {
+            moveScroll(item);
+          }}
+          className={currentScroll > 0 ? 'changeScroll' : ''}
+        >
+          {item}
+        </div>
+      ))}
     </div>
   );
 };
