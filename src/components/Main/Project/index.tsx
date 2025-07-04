@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
-import Frame from './Frame';
+import Image from 'next/image';
+import Link from 'next/link';
 
 import {PROJECT_LIST} from '../../../utils/contants/project';
 
@@ -15,18 +15,54 @@ const Project = ({
         <div ref={projectRef}>Project</div>
         <div>
           {PROJECT_LIST.map((item, index) => (
-            <>
-              <Frame
-                key={`frame-index-${index}`}
-                title={item.title}
-                period={item.peroid}
-                imgs={item.imgs}
-                description={item.description}
-                mainFunction={item.mainFunction}
-                link={item.link}
-                stack={item.stack}
-              />
-            </>
+            <div key={`project-outer-box-${index}`}>
+              <div key={`title-box-${index}`}>{item.title}</div>
+              <div key={`period-box-${index}`}>{item.peroid}</div>
+              <div key={`inner-box-${index}`}>
+                <div key={`img-box-${index}`}>
+                  <div key={`img-title-${index}`}>
+                    {item.imgs.map((elem, index) => (
+                      <Image key={`img-index-${index}`} {...elem} alt="" />
+                    ))}
+                  </div>
+                </div>
+                <div key={`description-box-${index}`}>
+                  <ul key={`description-ul-${index}`}>
+                    {item.description.map((elem, index) => (
+                      <li key={`descrption-index-${index}`}>{elem}</li>
+                    ))}
+                  </ul>
+                  <div key={`main-function-box-${index}`}>
+                    <div key={`main-function-title-${index}`}>주요기능</div>
+                    <div key={`main-function-list-${index}`}>
+                      {item.mainFunction.map((elem, index) => (
+                        <div key={`mainFunc-index-${index}`}>{elem}</div>
+                      ))}
+                    </div>
+                  </div>
+                  <div key={`link-box-${index}`}>
+                    <div key={`link-title-${index}`}>Link</div>
+                    <div key={`link-list-${index}`}>
+                      <Link
+                        key={`link-url-${index}`}
+                        href={item.link.url}
+                        passHref
+                      >
+                        <div key={`link-inner-title-${index}`}>
+                          {item.link.title}
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                  {item.stack.map((elem, index) => (
+                    <div key={`stack-outer-div-${index}`}>
+                      <div key={`stack-inner-name-${index}`}>{elem.name}</div>
+                      <div key={`stack-inner-list-${index}`}>{elem.list}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
