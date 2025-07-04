@@ -36,7 +36,7 @@ export const PROJECT_LIST = [
       '본인 인증 (Nice 솔루션) 도입 및 개발',
       '결제 PG사 솔루션 도입',
     ],
-    link: {title: '주식박스', url: 'https://xn--bh3b03j3e14v.com/'},
+    link: {title: 'N/A', url: ''},
     stack: [
       {name: 'BackEnd', list: 'NodeJS, Typescript, MySQL, SequelizeORM'},
       {

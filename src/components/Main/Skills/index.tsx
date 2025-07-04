@@ -18,7 +18,7 @@ const SkillsComponent = ({
               <div key={`index-i-stackList-${i}`}>
                 <div key={`index-stackList-title-${i}`}>{item.title}</div>
                 {item.imgList.map((img, j) => (
-                  <Image src={img.src} alt="" key={`index-j-img-${j}`} />
+                  <Image src={img.src} alt="" key={`index-j-img-${j}`}  width={120} height={50}/>
                 ))}
               </div>
             </div>
