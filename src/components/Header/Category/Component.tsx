@@ -30,7 +30,7 @@ const CategoryContainer = styled.div<{isScroll: boolean}>`
   gap: 2rem;
   align-items: center;
 
-  @media screen and (max-width: 426px) {
+  @media screen and (max-width: 524px) {
     flex-direction: column;
     gap: 0.5rem;
     padding: 0.5rem 2rem;
@@ -68,7 +68,7 @@ const CategoryItem = styled.button<{isScroll: boolean}>`
     }
   }
 
-  @media screen and (max-width: 426px) {
+  @media screen and (max-width: 524px) {
     width: 100%;
     padding: 1rem;
     text-align: center;
