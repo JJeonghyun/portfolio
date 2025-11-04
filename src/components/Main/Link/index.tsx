@@ -56,7 +56,7 @@ const LinkContainer = styled.div`
       justify-content: space-between;
       color: black;
       flex-wrap: wrap;
-      @media only screen and (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         flex-wrap: wrap;
         justify-content: center;
       }
@@ -70,7 +70,7 @@ const LinkContainer = styled.div`
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 2px 2px 2px 2px white;
         padding: 3% 0;
-        @media only screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
           width: 90%;
         }
 

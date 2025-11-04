@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import TypeWriter, {Options} from 'typewriter-effect';
 
-const stackArr: string[] = ['웹 개발자', '서버 개발자', '웹 백엔드', '웹 프론트엔드'];
+const stackArr: string[] = ['웹 개발자', '서버 개발자', '백엔드', '프론트엔드'];
 
 const IntroComponent = ({moveScroll}: {moveScroll: (ref: string) => void}) => {
   const options: Options = {
@@ -43,15 +43,15 @@ const IntroContainer = styled.div`
   background-size: 100%;
   height: 75vh;
   width: 100%;
-  @media only screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     background-size: cover;
   }
   & > div:first-child {
     padding: 10% 0 0 0;
-    @media only screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       padding: 30% 0 0 0;
     }
-    @media only screen and (max-width: 426px) {
+    @media screen and (max-width: 426px) {
       padding: 45% 0 0 0;
     }
     & > div {
@@ -60,7 +60,7 @@ const IntroContainer = styled.div`
       font-size: 3rem;
       color: white;
       font-weight: 900;
-      @media only screen and (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         color: black;
       }
     }
