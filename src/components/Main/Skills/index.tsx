@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-
 import {STACK_LIST} from '../../../utils/contants/stack';
 
 const SkillsComponent = ({
@@ -10,15 +9,24 @@ const SkillsComponent = ({
 }) => {
   return (
     <SkillsContainer>
-      <div>
-        <div ref={skillRef}>SKILLS</div>
-        <div>
-          {STACK_LIST.map((item, i) => (
-            <div key={`index-outer-stackList-${i}`}>
-              <div key={`index-i-stackList-${i}`}>
-                <div key={`index-stackList-title-${i}`}>{item.title}</div>
-                {item.imgList.map((img, j) => (
-                  <Image src={img.src} alt="" key={`index-j-img-${j}`}  width={120} height={50}/>
+      <div className="skills-wrapper">
+        <div className="title" ref={skillRef}>
+          SKILLS
+        </div>
+        <div className="skills-list">
+          {STACK_LIST.map((category, i) => (
+            <div key={`skill-category-${i}`} className="skill-category">
+              <h3 className="category-title">{category.title}</h3>
+              <div className="skills-items">
+                {category.imgList.map((img, j) => (
+                  <div key={`skill-${j}`} className="skill-item">
+                    <Image
+                      src={img.src}
+                      alt={`${category.title} skill ${j + 1}`}
+                      width={120}
+                      height={50}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
@@ -28,78 +36,113 @@ const SkillsComponent = ({
     </SkillsContainer>
   );
 };
+
 export default SkillsComponent;
 
 const SkillsContainer = styled.div`
   width: 100%;
-  background-color: #f1f3f5;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  padding: 60px 0;
 
-  & > div {
-    padding: 35px 0;
-    width: 75%;
+  .skills-wrapper {
+    width: 85%;
+    max-width: 1400px;
     margin: 0 auto;
-    color: #007bff;
-    & > div:first-child {
-      width: fit-content;
-      margin: 0 auto;
-      font-size: 2.5rem;
-      font-weight: 850;
-      border-bottom: 1px solid lightgray;
+  }
+
+  .title {
+    width: fit-content;
+    margin: 0 auto 50px;
+    font-size: 2.8rem;
+    font-weight: 850;
+    color: #343a40;
+    border-bottom: 3px solid #343a40;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .skill-category {
+    flex: 0 1 250px;
+    min-width: 200px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     }
-    & > div:last-child {
-      padding: 20px;
-      width: 100%;
 
-      @media only screen and (max-width: 426px) {
-        justify-content: center;
-      }
-      & > div {
-        width: auto;
-        margin: 10px;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.8);
-        box-shadow: 2px 2px 2px 2px white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        transition: transform 0.3s ease;
+    @media screen and (max-width: 768px) {
+      flex: 1 1 200px;
+    }
+  }
 
-        @media only screen and (max-width: 768px) {
-          width: 150px;
-        }
-        @media only screen and (max-width: 426px) {
-          width: 120px;
-        }
+  .category-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+    text-align: center;
+  }
 
-        & > div {
-          width: 100%;
-          margin: 0 auto;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          gap: 5px;
-          & > img {
-            width: 120px;
-            height: auto;
-            padding: 5px;
-          }
-          & > div:first-child {
-            width: 200px;
-            padding: 5px 10px;
-            color: #007bff;
-            border-right: 1px solid lightgray;
-            font-size: 1.2rem;
-            font-weight: 800;
-            text-align: center;
-          }
-        }
+  .skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
 
-        &:hover {
-          transform: translateY(-5px);
-          box-shadow: 3px 3px 3px 3px lightgray;
-        }
-      }
+  .skill-item {
+    flex: 0 1 120px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      background: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .skills-wrapper {
+      width: 90%;
+    }
+
+    .title {
+      font-size: 2.3rem;
+    }
+
+    .category-title {
+      font-size: 1.3rem;
+    }
+
+    .skill-item {
+      padding: 10px;
     }
   }
 `;
