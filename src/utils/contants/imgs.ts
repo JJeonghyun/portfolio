@@ -22,6 +22,7 @@ import filezillaImg from '/public/imgs/stack/etc/filezilla.jpeg';
 import amazonImg from '/public/imgs/stack/etc/amazonWebservices.png';
 import jenkinsImg from '/public/imgs/stack/etc/jenkins.png';
 import githubActionImg from '/public/imgs/stack/etc/github_action.png';
+import verselImg from '/public/vercel.svg';
 
 import stockBoxLogin from '/public/imgs/StockBox/Login.png';
 import stockBoxMain from '/public/imgs/StockBox/Main.png';
@@ -92,6 +93,7 @@ export {
   amazonImg,
   jenkinsImg,
   githubActionImg,
+  verselImg,
   stockBoxLogin,
   stockBoxMain,
   stockBoxPayment,

@@ -19,6 +19,7 @@ import {
   amazonImg,
   jenkinsImg,
   githubActionImg,
+  verselImg,
 } from './imgs';
 
 export const STACK_LIST = [
@@ -43,6 +44,6 @@ export const STACK_LIST = [
   },
   {
     title: 'Deployment',
-    imgList: [amazonImg, jenkinsImg, githubActionImg],
+    imgList: [amazonImg, jenkinsImg, githubActionImg, verselImg],
   },
 ];
