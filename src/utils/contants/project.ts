@@ -111,7 +111,7 @@ export const PROJECT_LIST = [
       '진행했던 프로젝트',
       '기타 경력 사항과 Footer',
     ],
-    link: {title: 'Portfolio', url: 'https://jjh-portfolio.com/'},
+    link: {title: 'Portfolio', url: 'https://jjhportfolio.vercel.app/'},
 
     stack: [
       {name: 'FrontEnd', list: 'NextJS, typeScript'},
