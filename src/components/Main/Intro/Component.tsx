@@ -1,35 +1,44 @@
 import styled from 'styled-components';
 import TypeWriter, {Options} from 'typewriter-effect';
 
-const stackArr: string[] = ['웹 개발자', '서버 개발자', '백엔드', '프론트엔드'];
+import {title} from '../../../utils/contants/info';
 
 const IntroComponent = ({moveScroll}: {moveScroll: (ref: string) => void}) => {
   const options: Options = {
-    strings: stackArr,
+    strings: title,
     autoStart: true,
     loop: true,
-    delay: 150,
+    delay: 75,
+    deleteSpeed: 50,
   };
 
   return (
     <IntroContainer>
-      <div>
-        <div>
-          <TypeWriter options={options} />
+      <div className="intro-content">
+        <div className="title-section">
+          <div className="typewriter">
+            <TypeWriter options={options} />
+          </div>
+          <h1 className="name">장정현</h1>
         </div>
-        <div>장정현</div>
-      </div>
-      <div>
-        <div>안녕하세요!</div>
-        <div>매일 성장하는 것을 목표로 하는 웹 개발자입니다.</div>
-        <div>새로운 기술을 배우는 것에 흥미를 느끼고 있습니다.</div>
-      </div>
-      <div
-        onClick={() => {
-          moveScroll('about');
-        }}
-      >
-        더 알아보기 ▼
+
+        <div className="description">
+          <p className="greeting">안녕하세요! 👋</p>
+          <p className="main-text">
+            혁신적인 웹 솔루션을 만드는 개발자입니다.
+            <br />
+            새로운 기술에 대한 열정과 끊임없는 성장을 추구합니다.
+          </p>
+        </div>
+
+        <button
+          className="learn-more"
+          onClick={() => moveScroll('About me')}
+          aria-label="Learn more about me"
+        >
+          더 알아보기
+          <span className="arrow">▼</span>
+        </button>
       </div>
     </IntroContainer>
   );
@@ -38,54 +47,191 @@ const IntroComponent = ({moveScroll}: {moveScroll: (ref: string) => void}) => {
 export default IntroComponent;
 
 const IntroContainer = styled.div`
-  background-image: url('./imgs/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 75vh;
+  position: relative;
+  height: 85vh;
   width: 100%;
-  @media screen and (max-width: 768px) {
-    background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url('./imgs/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .intro-content {
+    width: 90%;
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
   }
-  & > div:first-child {
-    padding: 10% 0 0 0;
-    @media screen and (max-width: 768px) {
-      padding: 30% 0 0 0;
-    }
-    @media screen and (max-width: 426px) {
-      padding: 45% 0 0 0;
-    }
-    & > div {
-      width: fit-content;
-      margin: 0 auto;
-      font-size: 3rem;
-      color: white;
-      font-weight: 900;
-      @media screen and (max-width: 768px) {
-        color: black;
-      }
-    }
-    & > div:first-child {
+
+  .title-section {
+    margin-bottom: 2.5rem;
+
+    .typewriter {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #4caf50;
+      margin-bottom: 1rem;
+      height: 3.5rem;
       display: flex;
       justify-content: center;
+      align-items: center;
+
+      .Typewriter {
+        .Typewriter__wrapper {
+          color: #4caf50;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .Typewriter__cursor {
+          color: #4caf50;
+        }
+      }
     }
-  }
-  & > div:nth-child(2) {
-    padding: 3% 0 0 0;
-    & > div {
-      width: fit-content;
-      margin: 0 auto;
-      font-size: 1.2rem;
+
+    .name {
+      font-size: 3.5rem;
+      font-weight: 900;
       color: white;
+      margin: 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(120deg, #4caf50, #8bc34a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
-  & > div:last-child {
-    background-color: rgba(122, 33, 223, 1);
-    padding: 15px 35px;
-    border-radius: 50px;
-    cursor: pointer;
+
+  .description {
+    margin-bottom: 2.5rem;
+
+    .greeting {
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 1.5rem;
+      animation: slideUp 1s ease-out;
+    }
+
+    .main-text {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin: 0;
+    }
+  }
+
+  .learn-more {
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
     color: white;
-    width: fit-content;
-    margin: 3% auto;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
     font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+
+      .arrow {
+        transform: translateY(3px);
+      }
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 80vh;
+
+    .intro-content {
+      padding: 1.5rem;
+      margin-top: -2vh;
+    }
+
+    .title-section {
+      .typewriter {
+        font-size: 2rem;
+        height: 3rem;
+      }
+
+      .name {
+        font-size: 3rem;
+      }
+    }
+
+    .description {
+      .greeting {
+        font-size: 1.8rem;
+      }
+
+      .main-text {
+        font-size: 1.1rem;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 75vh;
+
+    .intro-content {
+      padding: 1rem;
+      margin-top: 0;
+    }
+
+    .title-section {
+      margin-bottom: 2rem;
+
+      .typewriter {
+        font-size: 1.5rem;
+        height: 2.5rem;
+      }
+
+      .name {
+        font-size: 2.5rem;
+      }
+    }
+
+    .description {
+      margin-bottom: 2rem;
+
+      .greeting {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .main-text {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+    }
+
+    .learn-more {
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+    }
   }
 `;

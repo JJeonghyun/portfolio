@@ -7,6 +7,13 @@ import {
   graduationHatImg,
 } from './imgs';
 
+export const title: string[] = [
+  'Web Application Developer',
+  'Back-End Developer',
+  'Full Stack Developer',
+  'Front-End Developer',
+];
+
 export const INFO = [
   {
     img: userImg,
