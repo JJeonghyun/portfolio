@@ -1,12 +1,30 @@
-import {smartLogo, quantumLogo, crosscheckLogo, logo} from './imgs';
+import {smartLogo, quantumLogo, crosscheckLogo, logo, innoLogo} from './imgs';
 
 export const CAREER_DATA = [
+  {
+    img: innoLogo,
+    alt: '이노어센드',
+    width: 150,
+    company: '주식회사 이노어센드',
+    period: '2025.8 ~ (재직중)',
+    description: '오늘의 혁신이 내일의 도약으로',
+    position: '직무 : Software Engineer',
+    job: '주요업무 :',
+    jobList: [
+      '- 백엔드 / 프론트 개발',
+      '- UI/UX 최적화 및 사용자 경험 개선',
+      '- 기존 플랫폼 유지 및 보수',
+      '- API 통합 및 관리',
+      '- 서버 데이터베이스 및 보안 관리',
+      '- 그 외 제반 IT 업무',
+    ],
+  },
   {
     img: smartLogo,
     alt: '스마트샤인',
     width: 150,
     company: '주식회사 스마트샤인',
-    period: '2024.12 ~ (재직중)',
+    period: '2024.12 ~ 2025.08',
     description: '전문 인력과 스마트 기술의 결합, 완벽한 객실관리의 시작',
     position: '소속 : 본사 IT부서',
     job: '주요업무 :',

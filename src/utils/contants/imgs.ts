@@ -56,23 +56,25 @@ import locationImg from '/public/imgs/location.png';
 import telephoneCallImg from '/public/imgs/telephone-call.png';
 import userImg from '/public/imgs/user.png';
 
-import logo from '/public/imgs/careerImg-removebg-preview.png';
-import crosscheckLogo from '/public/imgs/CC_Signature_vertical.png';
-import smartLogo from '/public/imgs/logo_b.svg';
-import quantumLogo from '/public/imgs/QD_signature_vertical_black.png';
+import logo from '/public/imgs/career/careerImg-removebg-preview.png';
+import crosscheckLogo from '/public/imgs/career/CC_Signature_vertical.png';
+import smartLogo from '/public/imgs/career/logo_b.svg';
+import quantumLogo from '/public/imgs/career/QD_signature_vertical_black.png';
+import innoLogo from '/public/imgs/career/inno_logo.svg';
 
-import gitHubImg from '/public/imgs/github.png';
-import instagramWhiteImg from '/public/imgs/instagramWhite.png';
-import linkedinWhiteImg from '/public/imgs/linkedinWhite.png';
-import notionWhiteImg from '/public/imgs/notionWhite.jpg';
-import RocketPunchImg from '/public/imgs/rocketPunchWhite.png';
-import tistoryWhiteImg from '/public/imgs/tistoryWhite.png';
+import gitHubImg from '/public/imgs/sns/github.png';
+import instagramWhiteImg from '/public/imgs/sns/instagramWhite.png';
+import linkedinWhiteImg from '/public/imgs/sns/linkedinWhite.png';
+import notionWhiteImg from '/public/imgs/sns/notionWhite.jpg';
+import RocketPunchImg from '/public/imgs/sns/rocketPunchWhite.png';
+import tistoryWhiteImg from '/public/imgs/sns/tistoryWhite.png';
 
 export {
   logo,
   crosscheckLogo,
   smartLogo,
   quantumLogo,
+  innoLogo,
   HTML_CSS_JSImg,
   reduxImg,
   reactImg,
