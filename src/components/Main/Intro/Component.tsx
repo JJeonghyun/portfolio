@@ -31,11 +31,7 @@ const IntroComponent = ({moveScroll}: {moveScroll: (ref: string) => void}) => {
           </p>
         </div>
 
-        <button
-          className="learn-more"
-          onClick={() => moveScroll('About me')}
-          aria-label="Learn more about me"
-        >
+        <button className="learn-more" onClick={() => moveScroll('About me')}>
           더 알아보기
           <span className="arrow">▼</span>
         </button>

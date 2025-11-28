@@ -60,7 +60,6 @@ const HeaderComponent = ({
             <button
               className={`menu-toggle ${open ? 'active' : ''}`}
               onClick={toggleFunc}
-              aria-label="Toggle menu"
             >
               <span className="hamburger-icon"></span>
             </button>
